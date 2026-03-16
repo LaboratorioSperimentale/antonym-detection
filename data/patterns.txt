@@ -10,7 +10,7 @@ dal più X al più Y
 X ma Y
 non X ma Y
 più X che Y
-meno Y che Y
+meno X che Y
 tanto X quanto Y
 X anziché Y
 X invece di Y

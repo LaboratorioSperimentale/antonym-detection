@@ -1,1 +1,4 @@
 regex
+requests
+tqdm
+pandas

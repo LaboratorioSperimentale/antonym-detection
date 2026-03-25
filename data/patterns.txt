@@ -13,7 +13,9 @@ più X che Y
 meno X che Y
 tanto X quanto Y
 X anziché Y
-X invece di Y
-X al posto di Y
-X, non Y
-X o Y?
+X invece_di Y
+X al_posto_di Y
+X , non Y
+X o Y ?
+sia X sia Y
+X invece_che Y

@@ -1,0 +1,97 @@
+pattern	pair	count
+X e Y	grande - piccolo	715
+X e Y	bianco - nero	440
+X e Y	femminile - maschile	311
+X e Y	alto - basso	224
+X o Y	grande - piccolo	220
+X o Y	buono - cattivo	163
+X e Y	buono - cattivo	117
+X o Y	falso - vero	117
+X o Y	bello - brutto	81
+X o Y	bianco - nero	79
+X e Y	povero - ricco	68
+X e Y	giovane - vecchio	64
+X e Y	lontano - vicino	64
+X o Y	morto - vivo	59
+X o Y	femminile - maschile	45
+X o Y	alto - basso	43
+tra X e Y	alto - basso	36
+X o Y	lontano - vicino	35
+X e Y	chiaro - scuro	33
+X e Y	bello - brutto	33
+X o Y	giovane - vecchio	32
+X e Y	falso - vero	32
+tra X e Y	grande - piccolo	30
+X o Y	povero - ricco	30
+tra X e Y	buono - cattivo	27
+X o Y	corto - lungo	23
+X e Y	debole - forte	22
+X e Y	leggero - pesante	21
+tra X e Y	falso - vero	17
+sia X che Y	femminile - maschile	16
+sia X sia Y	femminile - maschile	15
+X o Y	felice - triste	14
+X e Y	morto - vivo	13
+X e Y	corto - lungo	12
+X o Y	chiaro - scuro	12
+X e Y	profondo - superficiale	11
+a X e Y	grande - piccolo	11
+X o Y	debole - forte	11
+tra X e Y	femminile - maschile	9
+X e Y	lento - veloce	8
+X o Y	leggero - pesante	7
+X o Y	malato - sano	7
+X e Y	felice - triste	7
+tra X e Y	bianco - nero	5
+X o Y	lento - veloce	5
+X e Y	largo - stretto	5
+X e Y	malato - sano	5
+X o Y	profondo - superficiale	4
+tra X e Y	bello - brutto	4
+o X o Y	bianco - nero	4
+X o Y	largo - stretto	3
+X ma Y	povero - ricco	3
+X ma Y	grande - piccolo	3
+X o Y	pulito - sporco	3
+sia X che Y	buono - cattivo	2
+o X o Y	alto - basso	2
+tra X e Y	chiaro - scuro	2
+o X o Y	falso - vero	2
+tra X e Y	debole - forte	2
+tra X e Y	pulito - sporco	2
+X , non Y	grande - piccolo	2
+da X a Y	alto - basso	2
+X ma Y	lontano - vicino	2
+X ma Y	giovane - vecchio	2
+X e Y	pulito - sporco	2
+X o Y	intelligente - stupido	2
+X , non Y	morto - vivo	1
+tanto X quanto Y	femminile - maschile	1
+X e Y	intelligente - stupido	1
+X , non Y	profondo - superficiale	1
+da X a Y	grande - piccolo	1
+sia X sia Y	lontano - vicino	1
+X , non Y	falso - vero	1
+X , non Y	debole - forte	1
+tra X e Y	leggero - pesante	1
+tra X e Y	lento - veloce	1
+tra X e Y	lontano - vicino	1
+tra X e Y	malato - sano	1
+sia X sia Y	profondo - superficiale	1
+sia X sia Y	grande - piccolo	1
+da X a Y	bianco - nero	1
+X ma Y	morto - vivo	1
+sia X sia Y	falso - vero	1
+sia X che Y	povero - ricco	1
+sia X che Y	morto - vivo	1
+sia X che Y	lontano - vicino	1
+sia X che Y	falso - vero	1
+sia X che Y	chiaro - scuro	1
+X , non Y	chiaro - scuro	1
+sia X che Y	bianco - nero	1
+sia X che Y	bello - brutto	1
+a X e Y	alto - basso	1
+o X o Y	corto - lungo	1
+o X o Y	buono - cattivo	1
+o X o Y	bello - brutto	1
+X , non Y	bello - brutto	1

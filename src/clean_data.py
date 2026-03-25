@@ -11,8 +11,8 @@ def detokenize(text):
 	# Decode HTML entities (&quot; → ", &amp; → &, etc.)
 	text = html.unescape(text)
 
-	# Fix apostrophes: word ' word → word'word
-	text = re.sub(r"(\w) ' (\w)", r"\1'\2", text)
+	# Fix apostrophes: word ' word → word'word (but not "po'" which is a standalone word)
+	text = re.sub(r"\b(\w+) ' (\w)", lambda m: m.group(1) + "'" + m.group(2) if m.group(1).lower() != "po" else m.group(0), text)
 	text = re.sub(r"(\w) '(\s|$)", r"\1'\2", text)
 
 	# Remove space before punctuation
@@ -46,6 +46,7 @@ def clean_underscore(df_dedup):
 def find_adjective(df_dedup):
 
 	rows_to_remove = set()
+	df_dedup["pair"] =  df_dedup["X"] + f" - " + df_dedup["Y"]
 
 	df_dedup["X_lemma"] = df_dedup["X"]
 	df_dedup["Y_lemma"] = df_dedup["Y"]
@@ -56,13 +57,12 @@ def find_adjective(df_dedup):
 		df_dedup.at[index, "costr"] = "__MISSING__"
 		df_dedup.at[index, "context_post"] = "__MISSING__"
 
-		if row["text"] == "":
-			rows_to_remove.add(row)
-			continue
+		# if row["text"] == "":
+		# 	rows_to_remove.add(row)
+		# 	continue
 
 		query = str(row["query"])
 		text = str(row["text"])
-
 
 		row["X_found"] = row["X"]
 		row["Y_found"] = row["Y"]
@@ -96,8 +96,8 @@ def find_adjective(df_dedup):
 			if match_text:
 				found_x = match_text.group(1)
 				found_y = match_text.group(3)
-				df_dedup.at[index, "X"] = found_x
-				df_dedup.at[index, "Y"] = found_y
+				df_dedup.at[index, "X_found"] = found_x
+				df_dedup.at[index, "Y_found"] = found_y
 
 				costr = prefix + match_text.group(1) + " " + match_text.group(2) + " " + match_text.group(3) + suffix
 
@@ -128,8 +128,8 @@ def find_adjective(df_dedup):
 			if match_text:
 				found_x = match_text.group(1)
 				found_y = match_text.group(3)
-				df_dedup.at[index, "X"] = found_x
-				df_dedup.at[index, "Y"] = found_y
+				df_dedup.at[index, "X_found"] = found_x
+				df_dedup.at[index, "Y_found"] = found_y
 
 				costr = prefix + match_text.group(1) + " " + match_text.group(2)	+ " " + match_text.group(3) + suffix
 
@@ -158,8 +158,8 @@ def find_adjective(df_dedup):
 			if match_text:
 				found_x = match_text.group(1)
 				found_y = match_text.group(3)
-				df_dedup.at[index, "X"] = found_x
-				df_dedup.at[index, "Y"] = found_y
+				df_dedup.at[index, "X_found"] = found_x
+				df_dedup.at[index, "Y_found"] = found_y
 
 				costr = prefix + match_text.group(1) + " " + match_text.group(2)	+ " " + match_text.group(3) + suffix
 				df_dedup.at[index, "context_pre"] = text.split(costr)[0]
@@ -199,17 +199,17 @@ def deduplicate_by_most_specific_query(df):
 
 					if is_contained(q_i, q_j):
 						rows_to_remove.add(i)
-						break
+						# break
 
 	df_removed = df.loc[list(rows_to_remove)]
 	df_dedup = df.drop(index=list(rows_to_remove))
 
 	# Drop any remaining duplicates by sent_id (different patterns, neither a substring of the other)
 	# keeping the row with the longest (most specific) query
-	df_dedup = df_dedup.sort_values("query", key=lambda s: s.str.len(), ascending=False)
-	extra_removed = df_dedup[df_dedup.duplicated(subset=["sent_id"], keep="first")]
-	df_removed = pd.concat([df_removed, extra_removed])
-	df_dedup = df_dedup.drop_duplicates(subset=["sent_id"], keep="first")
+	# df_dedup = df_dedup.sort_values("query", key=lambda s: s.str.len(), ascending=False)
+	# extra_removed = df_dedup[df_dedup.duplicated(subset=["sent_id"], keep="first")]
+	# df_removed = pd.concat([df_removed, extra_removed])
+	# df_dedup = df_dedup.drop_duplicates(subset=["sent_id"], keep="first")
 
 	return df_dedup, df_removed
 
@@ -217,7 +217,16 @@ def deduplicate_by_most_specific_query(df):
 if __name__ == "__main__":
 
 	df = pd.read_csv("data/output.tsv", sep="\t", dtype = str)
+	n_before = len(df)
 	df = df.dropna(subset=["text"])
+
+	print("=== STEP 0: empty text removal ===")
+	print(f"Removed: {n_before - len(df)} rows ({n_before} → {len(df)})")
+
+	n_before = len(df)
+	df = df[df["text"].str.split().str.len().between(10, 100)]
+	print("=== STEP 0b: sentence length filter (10–100 tokens) ===")
+	print(f"Removed: {n_before - len(df)} rows ({n_before} → {len(df)})")
 
 	df_dedup, df_removed = deduplicate_by_most_specific_query(df)
 	print("=== STEP 1: deduplication ===")
@@ -234,8 +243,30 @@ if __name__ == "__main__":
 	df_dedup = clean_underscore(df_dedup)
 	df_dedup = apply_detokenize(df_dedup)
 
-	cols = ["class", "pattern", "X", "X_lemma", "Y", "Y_lemma", "query", "sent_id", "context_pre", "costr", "context_post"]
+	cols = ["class", "pattern", "X_found", "Y_found",
+        "pair", "query", "sent_id",
+        "context_pre", "costr", "context_post"]
 	df_dedup = df_dedup[cols]
 
 	df_dedup.to_csv("data/output_clean.tsv", sep="\t", index=False)
 	print(f"=== DONE: {len(df_dedup)} rows written to data/output_clean.tsv ===")
+
+	print("\n=== STATS: 'yes' instances per (pattern, pair) ===")
+	yes_counts = (
+		df_dedup[df_dedup["class"] == "yes"]
+		.groupby(["pattern", "pair"])
+		.size()
+		.reset_index(name="count")
+		.sort_values("count", ascending=False)
+	)
+	yes_counts.to_csv("data/yes_instances.tsv", sep="\t", index=False)
+
+	print("\n=== STATS: 'no' instances per (X_found, Y_found) ===")
+	no_counts = (
+		df_dedup[df_dedup["class"] == "no"]
+		.groupby(["pattern", "pair"])
+		.size()
+		.reset_index(name="count")
+		.sort_values("count", ascending=False)
+	)
+	no_counts.to_csv("data/no_instances.tsv", sep="\t", index=False)

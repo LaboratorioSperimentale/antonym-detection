@@ -11,14 +11,10 @@ regular_expression_negative = {}
 def clean_token(token):
 
 	token = re.sub(r'_.', '', token)
-
-	token = re.sub(r"\s+([,;:!?.])", r"\1", token)
-
+	token = re.sub(r" +([,;:!?.])", r"\1", token)
 	token = re.sub(r"([\(\[«])\s+", r"\1", token)
-
-	token = re.sub(r"\s+([\)\]»])", r"\1", token)
-
-	token = re.sub(r"\s*'\s*", "'", token)
+	token = re.sub(r" +([\)\]»])", r"\1", token)
+	token = re.sub(r" *' *", "'", token)
 
 	return token
 
@@ -33,41 +29,30 @@ def process_paragraph (current_paragraph,
 
 	string_paragraph = " ".join(current_paragraph)
 
-	for query in regular_expression_positive:
+	for query, (query_sentence, (x, y, pattern)) in regular_expression_positive.items():
 		match = re.search(query, string_paragraph)
 
 		if match:
 			X_found = match.group(1)
 			Y_found = match.group(2)
-
-			query_sentence = rf'[.?!]([^.?!]*)({query})([^.?!]*[.?!])'
 			match = re.search(query_sentence, string_paragraph)
-			x, y, pattern = regular_expression_positive[query]
-			istance = "yes"
 
 			if match:
-				extraction = f"{istance}\t{pattern}\t{X_found}\t{Y_found}\t{x} - {y}\t{query}\t{match.group(1)}\t{match.group(2)}\t{match.group(5)}"
+				extraction = f"yes\t{pattern}\t{X_found}\t{Y_found}\t{x} - {y}\t{query.pattern}\t{match.group(1)}\t{match.group(2)}\t{match.group(5)}"
 				extraction = clean_token(extraction)
 				if valid_sentence_length(extraction):
 					print(extraction, file = file_output)
 
-	for query in regular_expression_negative:
+	for query, (query_sentence, (x, y, pattern)) in regular_expression_negative.items():
 		match = re.search(query, string_paragraph)
+
 		if match:
 			X_found = match.group(1)
 			Y_found = match.group(2)
-			# print("\nNEGATIVE MATCH")
-			# print("query:", query)
-			# print("Match:", match.group())
-			# print("Paragraph:", string_paragraph)
-
-			query_sentence = rf'[.?!]([^.?!]*)({query})([^.?!]*[.?!])'
 			match = re.search(query_sentence, string_paragraph)
-			x, y, pattern = regular_expression_negative[query]
-			istance = "no"
 
 			if match:
-				extraction = f"{istance}\t{pattern}\t{X_found}\t{Y_found}\t{x} - {y}\t{query}\t{match.group(1)}\t{match.group(2)}\t{match.group(5)}"
+				extraction = f"no\t{pattern}\t{X_found}\t{Y_found}\t{x} - {y}\t{query.pattern}\t{match.group(1)}\t{match.group(2)}\t{match.group(5)}"
 				extraction = clean_token(extraction)
 				if valid_sentence_length(extraction):
 					print(extraction, file = file_output)
@@ -153,7 +138,6 @@ if __name__ == "__main__":
 	input_root = pathlib.Path("data/coca/")
 
 	all_files = list(input_root.rglob("*.txt"))
-	print(all_files)
 
 	patterns_filename = "data/eng_patterns.txt"
 	seeds_filename = "data/eng_seeds.txt"
@@ -201,7 +185,19 @@ if __name__ == "__main__":
 				print(f"no\t{patterns[pattern]}\t{x}\t{y}\t{negative_three}", file=file_queries)
 				print(f"no\t{patterns[pattern]}\t{x}\t{y}\t{negative_four}", file=file_queries)
 
+	regular_expression_positive_compiled = {
+		re.compile(q): (re.compile(rf'[.?!]([^.?!]*)({q})([^.?!]*[.?!])'), v)
+		for q, v in regular_expression_positive.items()
+	}
+
+	regular_expression_negative_compiled = {
+		re.compile(q): (re.compile(rf'[.?!]([^.?!]*)({q})([^.?!]*[.?!])'), v)
+		for q, v in regular_expression_negative.items()
+	}
+
 	with open ("data/output_eng.tsv", "w") as file_output:
+
+		print("class\tpattern\tX_found\tY_found\tpair\tquery\tcontext_pre\tcostr\tcontext_post", file=file_output)
 
 		pbar = tqdm(all_files)
 		for file in pbar:
@@ -218,8 +214,8 @@ if __name__ == "__main__":
 
 					if riga[2] == "<p>":
 						process_paragraph(current_paragraph,
-								regular_expression_positive,
-								regular_expression_negative)
+								regular_expression_positive_compiled,
+								regular_expression_negative_compiled)
 						current_paragraph = []
 					else:
 						current_paragraph.append(riga[1] + "_" + riga[3][0])

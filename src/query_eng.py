@@ -160,7 +160,7 @@ def extract_pattern(string):
 
 if __name__ == "__main__":
 	
-	input_root = pathlib.Path("data/coca/coca_news/")
+	input_root = pathlib.Path("/media/CORPORA/CORPORA/COCA/coca-wlp/wlp_news_znw")
 	
 	all_files = list(input_root.rglob("*.txt"))
 	print(all_files)

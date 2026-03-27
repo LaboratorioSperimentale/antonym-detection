@@ -8,8 +8,23 @@ regular_expression_positive = {}
 regular_expression_negative = {}
 
 
+def clean_token(token):
+	token = re.sub(r'_.', '', token)
+
+	token = re.sub(r"\s+([,;:!?.])", r"\1", token)
+
+	token = re.sub(r"([\(\[«])\s+", r"\1", token)
+
+	token = re.sub(r"\s+([\)\]»])", r"\1", token)
+
+	token = re.sub(r"\s*'\s*", "'", token)
+
+	return token
 
 
+def valid_sentence_length(text, min_tokens=10, max_tokens=50):
+	n_tokens = len(text.split())
+	return min_tokens < n_tokens < max_tokens
 
 def process_paragraph (current_paragraph, regular_expression_positive, regular_expression_negative):
 
@@ -25,7 +40,7 @@ def process_paragraph (current_paragraph, regular_expression_positive, regular_e
 		# 	print("Match:", match.group())
 		# 	print("Paragraph:", string_paragraph)
    
-			query_sentence = rf'([.?!][^.?!]*)({query})([^.?!]*[.?!])'
+			query_sentence = rf'[.?!]([^.?!]*)({query})([^.?!]*[.?!])'
 			match = re.search(query_sentence, string_paragraph)
 			x, y, pattern = regular_expression_positive[query]
 			istance = "yes"
@@ -33,8 +48,10 @@ def process_paragraph (current_paragraph, regular_expression_positive, regular_e
 
 			if match:
 
-				print(f"{istance}\t{pattern}\t{X_found}\t{Y_found}\t{x} - {y}\t{query}\t{match.group(1)}\t{match.group(2)}\t{match.group(5)}", file = file_output)
-
+				extraction = f"{istance}\t{pattern}\t{X_found}\t{Y_found}\t{x} - {y}\t{query}\t{match.group(1)}\t{match.group(2)}\t{match.group(5)}"
+				extraction = clean_token(extraction)
+				if valid_sentence_length(extraction):
+					print(extraction, file = file_output)
 
 
 	
@@ -49,15 +66,17 @@ def process_paragraph (current_paragraph, regular_expression_positive, regular_e
 			# print("Match:", match.group())
 			# print("Paragraph:", string_paragraph)
 
-			query_sentence = rf'([.?!][^.?!]*)({query})([^.?!]*[.?!])'
+			query_sentence = rf'[.?!]([^.?!]*)({query})([^.?!]*[.?!])'
 			match = re.search(query_sentence, string_paragraph)
 			x, y, pattern = regular_expression_negative[query]
 			istance = "yes"
 
 			if match:
    
-				print(f"{istance}\t{pattern}\t{X_found}\t{Y_found}\t{x} - {y}\t{query}\t{match.group(1)}\t{match.group(2)}\t{match.group(5)}", file = file_output)
-
+				extraction = f"{istance}\t{pattern}\t{X_found}\t{Y_found}\t{x} - {y}\t{query}\t{match.group(1)}\t{match.group(2)}\t{match.group(5)}"
+				extraction = clean_token(extraction)
+				if valid_sentence_length(extraction):
+					print(extraction, file = file_output)
 
 
 
@@ -141,7 +160,7 @@ def extract_pattern(string):
 
 if __name__ == "__main__":
 	
-	input_root = pathlib.Path("/Users/gretagorzoni/Desktop/antonym-detection/data/coca/")
+	input_root = pathlib.Path("data/coca/coca_news/")
 	
 	all_files = list(input_root.rglob("*.txt"))
 	print(all_files)
@@ -188,7 +207,7 @@ if __name__ == "__main__":
 		pbar = tqdm(all_files)	
 		for file in pbar:
 			pbar.set_description(file.stem)
-			with open(file, "r", encoding="utf-8") as f:
+			with open(file, "r", encoding="latin-1") as f:
 				for riga in tqdm(f, desc="processing_file"):
 					riga = riga.strip()
 					

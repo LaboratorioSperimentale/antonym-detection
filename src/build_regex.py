@@ -1,4 +1,5 @@
 import regex as re
+import csv
 
 def generate_pattern(x, y, prefix, inner, suffix):
 	query = ''
@@ -8,14 +9,20 @@ def generate_pattern(x, y, prefix, inner, suffix):
 		for el in prefix:
 			query+= f'[word="{el}"]'
 
-	query+= f'[lemma="{x}" & pos="ADJ"]'
+	if x.startswith("!"):
+		query+= f'[lemma!="{x[1:]}" & pos="ADJ"]'
+	else:
+		query+= f'[lemma="{x}" & pos="ADJ"]'
 
 	if inner:
 		inner = inner.strip().split()
 		for el in inner:
 			query+= f'[word="{el}"]'
 
-	query+= f'[lemma="{y}" & pos="ADJ"]'
+	if y.startswith("!"):
+		query+= f'[lemma!="{y[1:]}" & pos="ADJ"]'
+	else:
+		query+= f'[lemma="{y}" & pos="ADJ"]'
 
 	if suffix:
 		suffix = suffix.strip().split()
@@ -45,21 +52,26 @@ if __name__ == "__main__":
 			sorted_linesplit = sorted(linesplit)
 			seeds.add((sorted_linesplit[0], sorted_linesplit[1]))
 
-	patterns = set()
+	patterns = {}
 
 	with open(patterns_filename) as fin:
 		for line in fin:
 			line = line.strip()
-			patterns.add(extract_pattern(line))
+			patterns[line] = extract_pattern(line)
 
 	regex_filename = "queries.txt"
 
 	with open(f"data/{regex_filename}", "w") as fout:
-		for pattern in patterns:
+		for pattern_key, pattern in patterns.items():
 			for x, y in seeds:
-				print(generate_pattern(x, y, *pattern), file=fout)
-				print(generate_pattern(y, x, *pattern), file=fout)
-				# input()
+
+				print(f'yes\t{pattern_key}\t{x}\t{y}\t{generate_pattern(x, y, *pattern)}', file=fout)
+				print(f'yes\t{pattern_key}\t{x}\t{y}\t{generate_pattern(y, x, *pattern)}', file=fout)
+
+				print(f'no\t{pattern_key}\t{x}\t{y}\t{generate_pattern(f"!{x}", y, *pattern)}', file=fout)
+				print(f'no\t{pattern_key}\t{x}\t{y}\t{generate_pattern(x, f"!{y}", *pattern)}', file=fout)
+				print(f'no\t{pattern_key}\t{x}\t{y}\t{generate_pattern(f"!{y}", x, *pattern)}', file=fout)
+				print(f'no\t{pattern_key}\t{x}\t{y}\t{generate_pattern(y, f"!{x}", *pattern)}', file=fout)
 
 
 

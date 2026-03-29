@@ -1,9 +1,9 @@
+import argparse
 import regex as re
 from tqdm import tqdm
-import glob
+import multiprocessing
 import pathlib
 
-current_paragraph = []
 regular_expression_positive = {}
 regular_expression_negative = {}
 
@@ -23,39 +23,79 @@ def valid_sentence_length(text, min_tokens=10, max_tokens=50):
 	n_tokens = len(text.split())
 	return min_tokens < n_tokens < max_tokens
 
-def process_paragraph (current_paragraph,
-                    regular_expression_positive,
-                    regular_expression_negative):
+
+def process_paragraph(current_paragraph,
+					regular_expression_positive,
+					regular_expression_negative,
+					output_file):
 
 	string_paragraph = " ".join(current_paragraph)
 
+	matched_pos = set()  # (X_found, Y_found, pattern_template) already matched
 	for query, (query_sentence, (x, y, pattern)) in regular_expression_positive.items():
 		match = re.search(query, string_paragraph)
 
 		if match:
 			X_found = match.group(1)
 			Y_found = match.group(2)
+			if any(pattern in q_pat for (xf, yf, q_pat) in matched_pos
+				   if xf == X_found and yf == Y_found):
+				continue
+			matched_pos.add((X_found, Y_found, pattern))
 			match = re.search(query_sentence, string_paragraph)
 
 			if match:
 				extraction = f"yes\t{pattern}\t{X_found}\t{Y_found}\t{x} - {y}\t{query.pattern}\t{match.group(1)}\t{match.group(2)}\t{match.group(5)}"
 				extraction = clean_token(extraction)
 				if valid_sentence_length(extraction):
-					print(extraction, file = file_output)
+					print(extraction, file=output_file)
 
+	matched_neg = set()  # (X_found, Y_found, pattern_template) already matched
 	for query, (query_sentence, (x, y, pattern)) in regular_expression_negative.items():
 		match = re.search(query, string_paragraph)
 
 		if match:
 			X_found = match.group(1)
 			Y_found = match.group(2)
+			if any(pattern in q_pat for (xf, yf, q_pat) in matched_neg
+				   if xf == X_found and yf == Y_found):
+				continue
+			matched_neg.add((X_found, Y_found, pattern))
 			match = re.search(query_sentence, string_paragraph)
 
 			if match:
 				extraction = f"no\t{pattern}\t{X_found}\t{Y_found}\t{x} - {y}\t{query.pattern}\t{match.group(1)}\t{match.group(2)}\t{match.group(5)}"
 				extraction = clean_token(extraction)
 				if valid_sentence_length(extraction):
-					print(extraction, file = file_output)
+					print(extraction, file=output_file)
+
+
+def process_batch(file_batch, re_pos, re_neg, output_path, position):
+
+
+	with open(output_path, "w") as fout:
+		print("class\tpattern\tX_found\tY_found\tpair\tquery\tcontext_pre\tcostr\tcontext_post", file=fout)
+
+		for file_path in tqdm(file_batch, desc=output_path.stem, position=position*2, leave=True):
+			current_paragraph = []
+
+			with open(file_path, "r", encoding="latin-1") as f:
+				for riga in tqdm(f, desc=file_path.stem, position=position*2+1, leave=False):
+					riga = riga.strip().split("\t")
+
+					if len(riga) < 4:
+						continue
+
+					if riga[2] == "<p>":
+						process_paragraph(current_paragraph,
+									re_pos, re_neg,
+									fout)
+						# for line in
+						# 	print(line, file=fout)
+						current_paragraph = []
+					else:
+						current_paragraph.append(riga[1] + "_" + riga[3][0])
+
 
 def generate_pattern_positive(x, y, prefix, inner, suffix):
 
@@ -124,7 +164,6 @@ def generate_pattern_negative(x, y, prefix, inner, suffix, side):
 
 def extract_pattern(string):
 	pattern = re.compile(r'^(?P<prefix>.*?)(?P<x>X)(?P<inner>.*?)(?P<y>Y)(?P<suffix>.*)$')
-	# s = "abc X e Y def"
 
 	m = pattern.search(string)
 
@@ -135,9 +174,12 @@ def extract_pattern(string):
 
 if __name__ == "__main__":
 
-	input_root = pathlib.Path("data/coca/")
+	parser = argparse.ArgumentParser()
+	parser.add_argument("input_root", type=pathlib.Path)
+	parser.add_argument("--workers", type=int, default=4)
+	args = parser.parse_args()
 
-	all_files = list(input_root.rglob("*.txt"))
+	all_files = list(args.input_root.rglob("*.txt"))
 
 	patterns_filename = "data/eng_patterns.txt"
 	seeds_filename = "data/eng_seeds.txt"
@@ -185,37 +227,29 @@ if __name__ == "__main__":
 				print(f"no\t{patterns[pattern]}\t{x}\t{y}\t{negative_three}", file=file_queries)
 				print(f"no\t{patterns[pattern]}\t{x}\t{y}\t{negative_four}", file=file_queries)
 
-	regular_expression_positive_compiled = {
-		re.compile(q): (re.compile(rf'[.?!]([^.?!]*)({q})([^.?!]*[.?!])'), v)
-		for q, v in regular_expression_positive.items()
-	}
+	re_pos_compiled = dict(sorted(
+		{
+			re.compile(q): (re.compile(rf'[.?!]([^.?!]*)({q})([^.?!]*[.?!])'), v)
+			for q, v in regular_expression_positive.items()
+		}.items(),
+		key=lambda item: len(item[1][1][2]), reverse=True
+	))
+	re_neg_compiled = dict(sorted(
+		{
+			re.compile(q): (re.compile(rf'[.?!]([^.?!]*)({q})([^.?!]*[.?!])'), v)
+			for q, v in regular_expression_negative.items()
+		}.items(),
+		key=lambda item: len(item[1][1][2]), reverse=True
+	))
 
-	regular_expression_negative_compiled = {
-		re.compile(q): (re.compile(rf'[.?!]([^.?!]*)({q})([^.?!]*[.?!])'), v)
-		for q, v in regular_expression_negative.items()
-	}
+	n_batches = args.workers
+	batches = [all_files[i::n_batches] for i in range(n_batches)]
 
-	with open ("data/output_eng.tsv", "w") as file_output:
+	batch_args = [
+		(batch, re_pos_compiled, re_neg_compiled,
+		pathlib.Path(f"data/output_eng_{i}.tsv"), i)
+		for i, batch in enumerate(batches)
+	]
 
-		print("class\tpattern\tX_found\tY_found\tpair\tquery\tcontext_pre\tcostr\tcontext_post", file=file_output)
-
-		pbar = tqdm(all_files)
-		for file in pbar:
-			pbar.set_description(file.stem)
-
-			with open(file, "r", encoding="latin-1") as f:
-
-				for riga in tqdm(f, desc="processing_file"):
-
-					riga = riga.strip().split("\t")
-
-					if len(riga) < 4:
-						continue
-
-					if riga[2] == "<p>":
-						process_paragraph(current_paragraph,
-								regular_expression_positive_compiled,
-								regular_expression_negative_compiled)
-						current_paragraph = []
-					else:
-						current_paragraph.append(riga[1] + "_" + riga[3][0])
+	with multiprocessing.Pool(processes=n_batches) as pool:
+		pool.starmap(process_batch, batch_args)

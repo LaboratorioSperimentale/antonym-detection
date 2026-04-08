@@ -1,175 +1,190 @@
 pattern	pair	count
-X e Y	grande - piccolo	5307
-X e Y	corto - lungo	3557
-X e Y	bianco - nero	2818
-X e Y	bello - brutto	2818
-X e Y	debole - forte	2779
-X e Y	giovane - vecchio	2669
-X e Y	chiaro - scuro	2558
-X e Y	alto - basso	2317
-X e Y	povero - ricco	1927
-X e Y	lento - veloce	1902
-X e Y	profondo - superficiale	1642
-X e Y	leggero - pesante	1545
-X e Y	felice - triste	1489
-X e Y	buono - cattivo	1254
-X e Y	largo - stretto	1122
-X e Y	intelligente - stupido	1053
-X e Y	malato - sano	1022
-X e Y	pulito - sporco	1011
-X e Y	falso - vero	944
-X e Y	lontano - vicino	850
-X e Y	morto - vivo	818
-X o Y	falso - vero	359
-X ma Y	grande - piccolo	292
-X o Y	bianco - nero	219
-X o Y	grande - piccolo	168
-X ma Y	lento - veloce	166
-X e Y	femminile - maschile	140
-a X e Y	corto - lungo	118
-X ma Y	bello - brutto	98
-X o Y	corto - lungo	94
-X o Y	alto - basso	94
-X o Y	giovane - vecchio	92
-X o Y	buono - cattivo	88
-X o Y	felice - triste	86
-X ma Y	povero - ricco	76
-tra X e Y	giovane - vecchio	75
-X o Y	debole - forte	74
-X ma Y	falso - vero	69
-X ma Y	leggero - pesante	66
-X ma Y	felice - triste	58
-X o Y	malato - sano	58
-X ma Y	debole - forte	57
-X o Y	morto - vivo	48
-X ma Y	chiaro - scuro	48
-X o Y	lontano - vicino	46
-X o Y	povero - ricco	46
-X o Y	bello - brutto	45
-X o Y	profondo - superficiale	43
-X o Y	intelligente - stupido	42
-X ma Y	corto - lungo	39
-X o Y	leggero - pesante	38
-X o Y	chiaro - scuro	35
-X ma Y	buono - cattivo	33
-X ma Y	giovane - vecchio	33
-X ma Y	lontano - vicino	33
+X e Y	grande - piccolo	5027
+X e Y	corto - lungo	3125
+X e Y	nuovo - vecchio	2581
+X e Y	caldo - freddo	2278
+X e Y	alto - basso	2047
+X e Y	povero - ricco	1784
+X e Y	lento - veloce	1663
+X e Y	difficile - facile	1661
+X e Y	duro - morbido	1571
+X e Y	leggero - pesante	1488
+X e Y	felice - triste	1424
+X e Y	buono - cattivo	1102
+X e Y	privato - pubblico	977
+X e Y	falso - vero	835
+X e Y	morto - vivo	760
+X e Y	giusto - sbagliato	711
+X e Y	attivo - passivo	579
+X o Y	maggiore - minore	446
+X e Y	asciutto - bagnato	436
+X e Y	femminile - mascolino	419
+X o Y	falso - vero	339
+X e Y	permanente - temporaneo	307
+X ma Y	grande - piccolo	284
+X e Y	rurale - urbano	260
+X e Y	maggiore - minore	243
+X e Y	sobrio - ubriaco	217
+X o Y	privato - pubblico	210
+X o Y	nuovo - vecchio	158
+X ma Y	lento - veloce	157
+X o Y	grande - piccolo	143
+a X e Y	corto - lungo	113
+X e Y	ottimista - pessimista	93
+X o Y	corto - lungo	82
+X o Y	felice - triste	80
+X o Y	buono - cattivo	79
+X o Y	alto - basso	77
+X o Y	giusto - sbagliato	73
+X o Y	difficile - facile	72
+X ma Y	difficile - facile	72
+X ma Y	povero - ricco	65
+X ma Y	leggero - pesante	64
+X o Y	permanente - temporaneo	64
+X ma Y	falso - vero	61
+X o Y	caldo - freddo	58
+X ma Y	duro - morbido	55
+X ma Y	felice - triste	55
+X o Y	femminile - mascolino	51
+X o Y	morto - vivo	45
+X o Y	povero - ricco	42
+X ma Y	corto - lungo	37
+X o Y	leggero - pesante	35
+X o Y	duro - morbido	34
+X ma Y	nuovo - vecchio	33
+X e Y	femminile - maschile	32
 a X e Y	grande - piccolo	32
-X ma Y	profondo - superficiale	31
-X ma Y	alto - basso	30
-X o Y	lento - veloce	30
-X , non Y	bello - brutto	30
-X ma Y	pulito - sporco	26
-X o Y	pulito - sporco	23
-X ma Y	intelligente - stupido	22
+X ma Y	buono - cattivo	30
+X ma Y	caldo - freddo	29
+X o Y	lento - veloce	28
+X ma Y	alto - basso	27
+X ma Y	giusto - sbagliato	26
+X ma Y	privato - pubblico	26
+X o Y	rurale - urbano	24
+X o Y	attivo - passivo	23
+X ma Y	sobrio - ubriaco	22
+X , non Y	nuovo - vecchio	21
+X , non Y	privato - pubblico	21
 X ma Y	morto - vivo	19
-X , non Y	alto - basso	15
-X , non Y	giovane - vecchio	15
-X ma Y	bianco - nero	14
-X o Y	largo - stretto	14
-X , non Y	bianco - nero	13
-tanto X quanto Y	bello - brutto	13
+X , non Y	difficile - facile	19
+sia X che Y	femminile - mascolino	16
+sia X sia Y	femminile - mascolino	15
+a X e Y	nuovo - vecchio	15
+X ma Y	permanente - temporaneo	14
+X o Y	asciutto - bagnato	14
+tanto X quanto Y	difficile - facile	14
+X , non Y	alto - basso	14
+sia X che Y	privato - pubblico	13
+X o Y	sobrio - ubriaco	13
 X , non Y	falso - vero	13
-X ma Y	malato - sano	11
-tanto X quanto Y	debole - forte	11
-X , non Y	debole - forte	11
-a X e Y	giovane - vecchio	10
-X , non Y	grande - piccolo	10
-X ma Y	largo - stretto	10
-a X e Y	alto - basso	10
-tra X e Y	grande - piccolo	10
-X , non Y	buono - cattivo	9
-X , non Y	corto - lungo	9
-X , non Y	chiaro - scuro	9
+X ma Y	maggiore - minore	11
+X ma Y	attivo - passivo	11
+sia X sia Y	privato - pubblico	10
+X , non Y	giusto - sbagliato	9
 tanto X quanto Y	grande - piccolo	9
+X , non Y	caldo - freddo	9
+a X e Y	alto - basso	9
+X , non Y	corto - lungo	9
+tra X e Y	femminile - mascolino	9
+tra X e Y	grande - piccolo	9
+X , non Y	buono - cattivo	8
+X , non Y	grande - piccolo	8
 X , non Y	leggero - pesante	8
-X o Y	femminile - maschile	8
-tanto X quanto Y	intelligente - stupido	7
-X , non Y	pulito - sporco	7
-non X ma Y	grande - piccolo	7
-sia X che Y	bianco - nero	7
-X , non Y	lontano - vicino	7
-tra X e Y	bianco - nero	7
-non X ma Y	bello - brutto	6
-non X ma Y	alto - basso	6
-tanto X quanto Y	profondo - superficiale	6
-tanto X quanto Y	giovane - vecchio	6
-tanto X quanto Y	falso - vero	6
-X , non Y	intelligente - stupido	6
+X ma Y	asciutto - bagnato	7
+tanto X quanto Y	maggiore - minore	6
+X , non Y	maggiore - minore	6
+non X ma Y	grande - piccolo	6
+tra X e Y	nuovo - vecchio	5
+tanto X quanto Y	falso - vero	5
+tra X e Y	privato - pubblico	5
 tanto X quanto Y	povero - ricco	5
-o X o Y	bianco - nero	5
-X ma Y	femminile - maschile	5
-X , non Y	profondo - superficiale	5
-tra X e Y	corto - lungo	4
+non X ma Y	difficile - facile	5
+non X ma Y	alto - basso	5
+X , non Y	attivo - passivo	4
 X , non Y	felice - triste	4
-X , non Y	femminile - maschile	4
-X , non Y	povero - ricco	4
-X , non Y	largo - stretto	4
-sia X che Y	giovane - vecchio	3
+tra X e Y	corto - lungo	4
+X , non Y	duro - morbido	4
+tanto X quanto Y	nuovo - vecchio	4
 non X ma Y	povero - ricco	3
-tanto X quanto Y	chiaro - scuro	3
+sia X che Y	rurale - urbano	3
 o X o Y	felice - triste	3
-tra X e Y	bello - brutto	3
-non X ma Y	debole - forte	3
-a X e Y	lento - veloce	3
+sia X che Y	nuovo - vecchio	3
 tanto X quanto Y	lento - veloce	3
+tanto X quanto Y	giusto - sbagliato	3
+X o Y	ottimista - pessimista	3
+a X e Y	difficile - facile	3
+X , non Y	femminile - mascolino	3
+X ma Y	femminile - mascolino	3
+X , non Y	povero - ricco	3
+a X e Y	lento - veloce	3
 X , non Y	morto - vivo	3
-o X o Y	intelligente - stupido	3
-tanto X quanto Y	felice - triste	2
-tanto X quanto Y	largo - stretto	2
-tanto X quanto Y	buono - cattivo	2
-sia X sia Y	bianco - nero	2
-o X o Y	grande - piccolo	2
-tra X e Y	buono - cattivo	2
-tra X e Y	falso - vero	2
-o X o Y	povero - ricco	2
 o X o Y	corto - lungo	2
-tra X e Y	leggero - pesante	2
-X , non Y	malato - sano	2
-X , non Y	lento - veloce	2
+sia X sia Y	duro - morbido	2
+tanto X quanto Y	caldo - freddo	2
+sia X che Y	permanente - temporaneo	2
+tanto X quanto Y	felice - triste	2
+X ma Y	femminile - maschile	2
+o X o Y	povero - ricco	2
+tra X e Y	buono - cattivo	2
+a X e Y	giusto - sbagliato	2
+tra X e Y	falso - vero	2
+o X o Y	grande - piccolo	2
+non X ma Y	giusto - sbagliato	2
+non X ma Y	attivo - passivo	2
 non X ma Y	falso - vero	2
-a X e Y	bianco - nero	2
-o X o Y	debole - forte	2
+o X o Y	buono - cattivo	2
 non X ma Y	buono - cattivo	2
-a X e Y	debole - forte	2
-non X ma Y	bianco - nero	2
+tra X e Y	leggero - pesante	2
+a X e Y	maggiore - minore	2
+X , non Y	lento - veloce	2
 meno X che Y	falso - vero	2
 non X ma Y	lento - veloce	2
-o X o Y	buono - cattivo	2
-a X e Y	leggero - pesante	1
-non X ma Y	femminile - maschile	1
-a X e Y	profondo - superficiale	1
-a X e Y	povero - ricco	1
-a X e Y	felice - triste	1
-tanto X quanto Y	lontano - vicino	1
-a X e Y	largo - stretto	1
-tanto X quanto Y	pulito - sporco	1
-a X e Y	falso - vero	1
-a X e Y	buono - cattivo	1
-tra X e Y	debole - forte	1
-X al_posto_di Y	falso - vero	1
+tra X e Y	giusto - sbagliato	2
+tanto X quanto Y	buono - cattivo	1
 tanto X quanto Y	corto - lungo	1
-o X o Y	giovane - vecchio	1
-non X ma Y	profondo - superficiale	1
-sia X che Y	femminile - maschile	1
-o X o Y	lento - veloce	1
-o X o Y	malato - sano	1
-o X o Y	morto - vivo	1
+X ma Y	ottimista - pessimista	1
+tanto X quanto Y	duro - morbido	1
+tanto X quanto Y	alto - basso	1
+X , non Y	ottimista - pessimista	1
+X invece_che Y	nuovo - vecchio	1
+tanto X quanto Y	femminile - mascolino	1
+X al_posto_di Y	falso - vero	1
+X , non Y	sobrio - ubriaco	1
+X , non Y	rurale - urbano	1
+tanto X quanto Y	ottimista - pessimista	1
+tanto X quanto Y	privato - pubblico	1
+tra X e Y	attivo - passivo	1
+sia X sia Y	morto - vivo	1
+X , non Y	permanente - temporaneo	1
+X o Y	femminile - maschile	1
+a X e Y	privato - pubblico	1
+sia X sia Y	giusto - sbagliato	1
+X , non Y	asciutto - bagnato	1
+a X e Y	povero - ricco	1
+non X ma Y	caldo - freddo	1
+non X ma Y	femminile - mascolino	1
+a X e Y	leggero - pesante	1
+o X o Y	alto - basso	1
+o X o Y	caldo - freddo	1
+o X o Y	difficile - facile	1
 o X o Y	falso - vero	1
-o X o Y	profondo - superficiale	1
+o X o Y	giusto - sbagliato	1
+o X o Y	lento - veloce	1
+o X o Y	nuovo - vecchio	1
+o X o Y	permanente - temporaneo	1
+o X o Y	privato - pubblico	1
 sia X che Y	buono - cattivo	1
 sia X che Y	corto - lungo	1
-sia X che Y	debole - forte	1
+sia X che Y	duro - morbido	1
 sia X che Y	falso - vero	1
+sia X che Y	femminile - maschile	1
+a X e Y	felice - triste	1
 sia X che Y	grande - piccolo	1
-o X o Y	largo - stretto	1
-sia X che Y	largo - stretto	1
-sia X che Y	lontano - vicino	1
 sia X che Y	morto - vivo	1
+a X e Y	falso - vero	1
+da X a Y	rurale - urbano	1
+a X e Y	caldo - freddo	1
 sia X sia Y	alto - basso	1
-o X o Y	bello - brutto	1
+sia X sia Y	caldo - freddo	1
 sia X sia Y	falso - vero	1
-sia X sia Y	giovane - vecchio	1
-sia X sia Y	morto - vivo	1
-tanto X quanto Y	alto - basso	1
-o X o Y	alto - basso	1
+tra X e Y	rurale - urbano	1

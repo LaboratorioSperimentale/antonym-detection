@@ -2,20 +2,20 @@ X e Y
 sia X che Y
 X o Y
 o X o Y
-né X né Y
+né X né Y ---
 a X e Y
 tra X e Y
 da X a Y
-dal più X al più Y
+dal più X al più Y ---
 X ma Y
-non X ma Y
-più X che Y
-meno X che Y
+non X ma Y ----
+più X che Y ---
+meno X che Y ---
 tanto X quanto Y
-X anziché Y
-X invece_di Y
-X al_posto_di Y
+X anziché Y ---
+X invece_di Y ---
+X al_posto_di Y ---
 X , non Y
-X o Y ?
+X o Y ? ---
 sia X sia Y
-X invece_che Y
+X invece_che Y ---

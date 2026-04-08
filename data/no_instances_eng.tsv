@@ -1,296 +1,296 @@
 pattern	pair	count
-X and Y	new - old	4362
-X and Y	difficult - easy	3305
-X and Y	large - small	2964
-X and Y	happy - sad	2585
-X and Y	long - short	2550
-X and Y	poor - rich	2481
-X and Y	bad - good	2314
-X and Y	hard - soft	2186
-X and Y	cold - hot	2174
-X and Y	dry - wet	1599
-X and Y	fast - slow	1556
-X and Y	heavy - light	1540
-X and Y	high - low	1492
-X and Y	alive - dead	1361
-X and Y	false - true	1137
-X and Y	private - public	1010
-X and Y	active - passive	830
-X and Y	right - wrong	745
-X or Y	new - old	708
-X or Y	bad - good	581
-X and Y	rural - urban	512
-X or Y	difficult - easy	472
-X or Y	large - small	396
-X and Y	permanent - temporary	381
-X and Y	drunk - sober	322
-X or Y	poor - rich	274
-X or Y	right - wrong	265
-X or Y	happy - sad	264
-X or Y	alive - dead	255
-X or Y	high - low	242
-X or Y	cold - hot	227
-X or Y	false - true	214
-X and Y	optimistic - pessimistic	186
-X or Y	hard - soft	186
-X or Y	private - public	182
-X or Y	dry - wet	159
-X or Y	heavy - light	155
-X and Y	feminine - masculine	149
-X and Y	major - minor	139
-from X to Y	bad - good	126
-X or Y	long - short	122
-X and Y	female - male	109
-both X and Y	new - old	107
-X or Y	permanent - temporary	95
-X or Y	rural - urban	93
-X or Y	active - passive	90
-X or Y	fast - slow	79
-X or Y	drunk - sober	78
-X, not Y	bad - good	76
+X and Y	new - old	4297
+X and Y	difficult - easy	3251
+X and Y	large - small	2930
+X and Y	happy - sad	2544
+X and Y	long - short	2525
+X and Y	poor - rich	2447
+X and Y	bad - good	2269
+X and Y	hard - soft	2157
+X and Y	cold - hot	2147
+X and Y	dry - wet	1590
+X and Y	fast - slow	1547
+X and Y	heavy - light	1514
+X and Y	high - low	1481
+X and Y	alive - dead	1343
+X and Y	false - true	1117
+X and Y	private - public	987
+X and Y	active - passive	820
+X and Y	right - wrong	725
+X or Y	new - old	697
+X or Y	bad - good	564
+X and Y	rural - urban	502
+X or Y	difficult - easy	465
+X or Y	large - small	380
+X and Y	permanent - temporary	374
+X and Y	drunk - sober	321
+X or Y	poor - rich	273
+X or Y	right - wrong	257
+X or Y	happy - sad	256
+X or Y	alive - dead	248
+X or Y	high - low	241
+X or Y	cold - hot	209
+X or Y	false - true	196
+X and Y	optimistic - pessimistic	185
+X or Y	private - public	178
+X or Y	hard - soft	173
+X or Y	dry - wet	157
+X or Y	heavy - light	152
+X and Y	feminine - masculine	147
+X and Y	major - minor	136
+from X to Y	bad - good	123
+X or Y	long - short	117
+X and Y	female - male	108
+both X and Y	new - old	105
+X or Y	permanent - temporary	94
+X or Y	rural - urban	90
+X or Y	active - passive	85
+X or Y	fast - slow	78
+X or Y	drunk - sober	77
+X, not Y	bad - good	70
 X or Y	major - minor	57
 both X and Y	large - small	52
-both X and Y	happy - sad	51
-X and Y alike	new - old	49
+both X and Y	happy - sad	50
 how X or Y	large - small	47
+X and Y alike	new - old	47
 both X and Y	difficult - easy	46
-both X and Y	private - public	45
-between X and Y	bad - good	39
+both X and Y	private - public	44
+between X and Y	bad - good	38
 more X than Y	female - male	36
-X or Y	feminine - masculine	29
-X or Y	female - male	29
 both X and Y	right - wrong	28
+X or Y	female - male	28
 both X and Y	false - true	27
-more X than Y	bad - good	26
+X or Y	feminine - masculine	26
+more X than Y	bad - good	25
+more X than Y	difficult - easy	23
 both X and Y	bad - good	23
 between X and Y	new - old	23
-more X than Y	difficult - easy	23
 neither X nor Y	new - old	22
 X, not Y	cold - hot	20
-either X or Y	alive - dead	19
-both X and Y	hard - soft	19
 both X and Y	high - low	19
+both X and Y	hard - soft	19
+either X or Y	alive - dead	19
 neither X nor Y	difficult - easy	18
 X or Y	optimistic - pessimistic	17
 both X and Y	heavy - light	17
-more X than Y	private - public	17
-more X than Y	high - low	16
 between X and Y	poor - rich	16
-both X and Y	rural - urban	15
-from X to Y	high - low	15
+more X than Y	high - low	16
+more X than Y	private - public	16
 more X than Y	active - passive	15
-between X and Y	private - public	14
-X, not Y	false - true	14
+from X to Y	high - low	15
+both X and Y	rural - urban	14
 X, not Y	happy - sad	14
-both X and Y	poor - rich	14
 more X than Y	new - old	14
 more X than Y	large - small	14
-between X and Y	high - low	13
+both X and Y	poor - rich	14
+between X and Y	private - public	14
 X, not Y	hard - soft	13
 more X than Y	happy - sad	13
-from X to Y	new - old	12
+between X and Y	high - low	13
+X, not Y	false - true	12
 more X than Y	heavy - light	12
 X, not Y	large - small	12
-from X to Y	cold - hot	11
-both X and Y	cold - hot	11
-both X and Y	alive - dead	11
-X, not Y	alive - dead	11
 from X to Y	happy - sad	11
+both X and Y	alive - dead	11
+from X to Y	cold - hot	11
 more X than Y	rural - urban	11
-neither X nor Y	bad - good	11
-not X, but Y	bad - good	10
+both X and Y	cold - hot	11
+from X to Y	new - old	11
+X, not Y	alive - dead	11
 X, not Y	new - old	10
-both X and Y	active - passive	10
 between X and Y	rural - urban	10
-both X and Y	permanent - temporary	9
+not X, but Y	bad - good	10
+neither X nor Y	bad - good	10
+both X and Y	active - passive	10
+between X and Y	cold - hot	9
 more X than Y	poor - rich	9
+both X and Y	permanent - temporary	9
 from X to Y	large - small	9
 how X or Y	hard - soft	9
-between X and Y	cold - hot	9
-how X or Y	new - old	8
-neither X nor Y	cold - hot	8
-more X than Y	alive - dead	8
-neither X nor Y	poor - rich	8
-either X or Y	right - wrong	8
-either X or Y	high - low	8
-either X or Y	bad - good	8
 from X to Y	rural - urban	8
-both X and Y	long - short	8
+more X than Y	alive - dead	8
 X, not Y	poor - rich	8
+neither X nor Y	cold - hot	8
+neither X nor Y	poor - rich	8
+either X or Y	high - low	8
 between X and Y	active - passive	8
+both X and Y	long - short	8
+how X or Y	new - old	8
+either X or Y	bad - good	8
+more X than Y	cold - hot	7
+both X and Y	fast - slow	7
+more X than Y	feminine - masculine	7
+either X or Y	false - true	7
 the very X and the very Y	new - old	7
+either X or Y	right - wrong	7
+either X or Y	private - public	7
+how X or Y	bad - good	7
+either X or Y	new - old	7
 X, not Y	difficult - easy	7
 X, not Y	long - short	7
-both X and Y	fast - slow	7
-either X or Y	false - true	7
-how X or Y	bad - good	7
-either X or Y	private - public	7
-either X or Y	new - old	7
-more X than Y	cold - hot	7
-more X than Y	feminine - masculine	7
-either X or Y	poor - rich	6
 either X or Y	drunk - sober	6
-more X than Y	false - true	6
 more X than Y	drunk - sober	6
-X and Y alike	poor - rich	6
 neither X nor Y	happy - sad	6
-not X, but Y	happy - sad	6
-X, not Y	heavy - light	6
+either X or Y	poor - rich	6
 X, not Y	dry - wet	6
-neither X nor Y	active - passive	5
-neither X nor Y	permanent - temporary	5
+X, not Y	heavy - light	6
+more X than Y	false - true	6
+either X or Y	cold - hot	5
+either too X or too Y	new - old	5
+either X or Y	permanent - temporary	5
+both X and Y	dry - wet	5
+between X and Y	right - wrong	5
+X and Y alike	poor - rich	5
+between X and Y	feminine - masculine	5
 whether X or Y	large - small	5
 more X than Y	long - short	5
-X rather than Y	permanent - temporary	5
-both X and Y	dry - wet	5
-whether X or Y	alive - dead	5
-between X and Y	feminine - masculine	5
-between X and Y	right - wrong	5
-either X or Y	permanent - temporary	5
-either too X or too Y	new - old	5
-either X or Y	cold - hot	5
-more X than Y	optimistic - pessimistic	5
+neither X nor Y	active - passive	5
 X, not Y	fast - slow	5
-both X and Y	major - minor	4
-X as well as Y	dry - wet	4
+more X than Y	optimistic - pessimistic	5
+neither X nor Y	permanent - temporary	5
+neither X nor Y	long - short	4
+either X or Y	large - small	4
+X as well as Y	bad - good	4
 X as well as Y	difficult - easy	4
+X as well as Y	dry - wet	4
+from X to Y	poor - rich	4
+both X and Y	drunk - sober	4
+not X, but Y	happy - sad	4
+whether X or Y	alive - dead	4
 X as well as Y	new - old	4
-X, not Y	feminine - masculine	4
+from X to Y	hard - soft	4
+whether X or Y	new - old	4
+X rather than Y	active - passive	4
+neither X nor Y	false - true	4
+neither X nor Y	drunk - sober	4
+X rather than Y	permanent - temporary	4
 both X and Y	feminine - masculine	4
 X, not Y	right - wrong	4
-both X and Y	drunk - sober	4
-neither X nor Y	alive - dead	4
-X as well as Y	bad - good	4
-more X than Y	permanent - temporary	4
 X, not Y	private - public	4
-X rather than Y	active - passive	4
-X rather than Y	cold - hot	4
-X rather than Y	private - public	4
-either X or Y	large - small	4
-from X to Y	poor - rich	4
-from X to Y	hard - soft	4
+X, not Y	feminine - masculine	4
+both X and Y	major - minor	4
+more X than Y	permanent - temporary	4
 either X or Y	difficult - easy	4
-whether X or Y	new - old	4
-neither X nor Y	long - short	4
-neither X nor Y	drunk - sober	4
+X rather than Y	private - public	4
 more X than Y	right - wrong	4
-neither X nor Y	false - true	4
-either X or Y	hard - soft	3
-either X or Y	active - passive	3
-either X or Y	fast - slow	3
+neither X nor Y	alive - dead	4
+X rather than Y	cold - hot	4
 neither X nor Y	large - small	3
-neither X nor Y	fast - slow	3
+how X or Y	long - short	3
+how X or Y	cold - hot	3
+how X or Y	permanent - temporary	3
+from X to Y	optimistic - pessimistic	3
+how X or Y	fast - slow	3
+how X or Y	right - wrong	3
 from X to Y	heavy - light	3
+neither X nor Y	fast - slow	3
+how X or Y	heavy - light	3
 from X to Y	dry - wet	3
-from X to Y	major - minor	3
-X as well as Y	poor - rich	3
+from X to Y	difficult - easy	3
+X as well as Y	rural - urban	3
+X rather than Y	happy - sad	3
+X rather than Y	bad - good	3
 between X and Y	large - small	3
 between X and Y	alive - dead	3
-X rather than Y	bad - good	3
-X rather than Y	happy - sad	3
-between X and Y	happy - sad	3
-from X to Y	active - passive	3
-from X to Y	difficult - easy	3
-how X or Y	fast - slow	3
-how X or Y	heavy - light	3
-how X or Y	long - short	3
-from X to Y	optimistic - pessimistic	3
-how X or Y	cold - hot	3
-how X or Y	right - wrong	3
-how X or Y	permanent - temporary	3
 X, not Y	permanent - temporary	3
 X, not Y	active - passive	3
-X rather than Y	hard - soft	3
-X as well as Y	rural - urban	3
+either X or Y	active - passive	3
+either X or Y	fast - slow	3
 X rather than Y	long - short	3
-X, not Y	major - minor	2
+either X or Y	hard - soft	3
+X rather than Y	hard - soft	3
+between X and Y	happy - sad	3
+from X to Y	active - passive	3
+X as well as Y	poor - rich	3
+neither X nor Y	private - public	2
+neither X nor Y	high - low	2
 between X and Y	difficult - easy	2
-between X and Y	hard - soft	2
-X rather than Y	optimistic - pessimistic	2
-X rather than Y	false - true	2
-not X, but Y	heavy - light	2
-whether X or Y	false - true	2
-between X and Y	permanent - temporary	2
-X, not Y	high - low	2
-X, not Y	female - male	2
-X rather than Y	large - small	2
-X, not Y	rural - urban	2
-from X to Y	alive - dead	2
-either X or Y	optimistic - pessimistic	2
-how X or Y	rural - urban	2
-either too X or too Y	long - short	2
-either X or Y	happy - sad	2
-X and Y alike	bad - good	2
-X and Y alike	large - small	2
-whether X or Y	rural - urban	2
 whether X or Y	private - public	2
 whether X or Y	permanent - temporary	2
-X as well as Y	high - low	2
-X as well as Y	cold - hot	2
-both X and Y	female - male	2
-X as well as Y	large - small	2
-X as well as Y	private - public	2
-neither X nor Y	right - wrong	2
-not X, but Y	difficult - easy	2
-neither X nor Y	private - public	2
-neither X nor Y	dry - wet	2
-neither X nor Y	high - low	2
-more X than Y	dry - wet	2
-from X to Y	fast - slow	2
-how X or Y	happy - sad	2
-more X than Y	fast - slow	2
-from X to Y	private - public	2
+X, not Y	rural - urban	2
+X, not Y	major - minor	2
+X, not Y	high - low	2
 more X than Y	major - minor	2
-between X and Y	long - short	1
-between X and Y	false - true	1
-between X and Y	fast - slow	1
-X as well as Y	drunk - sober	1
-X as well as Y	false - true	1
-not X, but Y	right - wrong	1
-not X, but Y	new - old	1
-not X, but Y	long - short	1
+X, not Y	female - male	2
+whether X or Y	false - true	2
+X as well as Y	large - small	2
+not X, but Y	heavy - light	2
+X as well as Y	high - low	2
+X rather than Y	large - small	2
+not X, but Y	difficult - easy	2
+more X than Y	fast - slow	2
+X rather than Y	false - true	2
+neither X nor Y	right - wrong	2
+neither X nor Y	dry - wet	2
+X as well as Y	cold - hot	2
+X rather than Y	optimistic - pessimistic	2
+whether X or Y	rural - urban	2
+X and Y alike	large - small	2
+from X to Y	private - public	2
+either X or Y	happy - sad	2
+from X to Y	major - minor	2
+either too X or too Y	long - short	2
+more X than Y	dry - wet	2
+X and Y alike	bad - good	2
+X as well as Y	private - public	2
+how X or Y	happy - sad	2
+how X or Y	rural - urban	2
+both X and Y	female - male	2
+between X and Y	permanent - temporary	2
+either X or Y	optimistic - pessimistic	2
+from X to Y	fast - slow	2
+between X and Y	hard - soft	2
+from X to Y	alive - dead	2
 not X, but Y	large - small	1
-not X, but Y	hard - soft	1
-not X, but Y	fast - slow	1
-whether X or Y	happy - sad	1
-the very X and the very Y	bad - good	1
-X rather than Y	female - male	1
-X rather than Y	alive - dead	1
-whether X or Y	difficult - easy	1
-separating X and Y	private - public	1
-the very X and the very Y	large - small	1
-X rather than Y	poor - rich	1
-X rather than Y	right - wrong	1
-X, not Y	drunk - sober	1
-X as well as Y	permanent - temporary	1
-X as well as Y	happy - sad	1
-X as well as Y	feminine - masculine	1
-X as well as Y	fast - slow	1
-X as well as Y	heavy - light	1
-X as well as Y	long - short	1
 either too X or too Y	high - low	1
-from X to Y	drunk - sober	1
-either X or Y	major - minor	1
-either X or Y	long - short	1
-either X or Y	rural - urban	1
-either too X or too Y	active - passive	1
-either too X or too Y	poor - rich	1
+between X and Y	fast - slow	1
+not X, but Y	fast - slow	1
+not X, but Y	hard - soft	1
+not X, but Y	new - old	1
+not X, but Y	false - true	1
+not X, but Y	drunk - sober	1
 either too X or too Y	cold - hot	1
+not X, but Y	long - short	1
 either too X or too Y	large - small	1
-both X and Y	optimistic - pessimistic	1
-how X or Y	poor - rich	1
-how X or Y	difficult - easy	1
-how X or Y	false - true	1
-X and Y alike	active - passive	1
+not X, but Y	right - wrong	1
+separating X and Y	private - public	1
+the very X and the very Y	bad - good	1
+the very X and the very Y	large - small	1
+not X, but Y	alive - dead	1
+X as well as Y	long - short	1
+whether X or Y	difficult - easy	1
+whether X or Y	happy - sad	1
+whether X or Y	hard - soft	1
+X as well as Y	permanent - temporary	1
+whether X or Y	long - short	1
+either too X or too Y	poor - rich	1
+X as well as Y	heavy - light	1
+neither X nor Y	major - minor	1
+either too X or too Y	active - passive	1
+either X or Y	rural - urban	1
+between X and Y	false - true	1
+between X and Y	long - short	1
 more X than Y	hard - soft	1
+how X or Y	poor - rich	1
+X, not Y	drunk - sober	1
+both X and Y	optimistic - pessimistic	1
+X rather than Y	right - wrong	1
+X rather than Y	poor - rich	1
+from X to Y	drunk - sober	1
+either X or Y	long - short	1
+how X or Y	false - true	1
+X rather than Y	female - male	1
+how X or Y	difficult - easy	1
+either X or Y	major - minor	1
+X rather than Y	alive - dead	1
 X as well as Y	active - passive	1
 neither X nor Y	female - male	1
 neither X nor Y	hard - soft	1
-neither X nor Y	optimistic - pessimistic	1
-neither X nor Y	major - minor	1
 neither X nor Y	heavy - light	1
-not X, but Y	alive - dead	1
-not X, but Y	drunk - sober	1
-whether X or Y	long - short	1
-not X, but Y	false - true	1
-whether X or Y	hard - soft	1
+X as well as Y	drunk - sober	1
+X as well as Y	false - true	1
+X as well as Y	fast - slow	1
+neither X nor Y	optimistic - pessimistic	1
+X as well as Y	feminine - masculine	1
+X as well as Y	happy - sad	1
+X and Y alike	active - passive	1

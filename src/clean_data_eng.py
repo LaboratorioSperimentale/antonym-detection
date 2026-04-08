@@ -186,23 +186,29 @@ def is_contained(short_q, long_q):
 
 def deduplicate_by_most_specific_query(df):
 
-	rows_to_remove = set()
+    # lunghezza della query
+    df["query_len"] = df["query"].astype(str).str.len()
 
-	for _, group in tqdm.tqdm(df.groupby("text"), desc="Deduplicating"):
+    # per ogni text, trova l'indice della query più lunga
+    
+    
+    df["text"] = df["context_pre"] + " " + df["costr"] + " " + df["context_post"]
+    
+    idx_to_keep = df.groupby("text")["query_len"].idxmax()
 
-		indices = group.index.tolist()
-		for i in indices:
-			for j in indices:
-				if i != j:
-					q_i = str(df.loc[i, "query"])
-					q_j = str(df.loc[j, "query"])
+    # dataframe finale
+    df_dedup = df.loc[idx_to_keep].copy()
 
-					if is_contained(q_i, q_j):
-						rows_to_remove.add(i)
-						# break
+    # righe rimosse
+    df_removed = df.drop(index=idx_to_keep).copy()
 
-	df_removed = df.loc[list(rows_to_remove)]
-	df_dedup = df.drop(index=list(rows_to_remove))
+    # pulizia colonna temporanea
+    df_dedup = df_dedup.drop(columns=["query_len"])
+    df_removed = df_removed.drop(columns=["query_len"])
+    
+    # togliere text da df dedup
+
+    return df_dedup, df_removed
 
 	# Drop any remaining duplicates by sent_id (different patterns, neither a substring of the other)
 	# keeping the row with the longest (most specific) query
@@ -211,15 +217,17 @@ def deduplicate_by_most_specific_query(df):
 	# df_removed = pd.concat([df_removed, extra_removed])
 	# df_dedup = df_dedup.drop_duplicates(subset=["sent_id"], keep="first")
 
-	return df_dedup, df_removed
+
 
 
 if __name__ == "__main__":
 
 	df = pd.read_csv("data/output_eng.tsv", sep="\t", dtype = str)
  
-	df_dedup = df.copy()
+	df_dedup, df_removed = deduplicate_by_most_specific_query(df)
 
+
+	df_dedup.to_csv("data/output_clean_eng.tsv", sep="\t", index=False)
 	print(f"=== DONE: {len(df_dedup)} rows written to data/output_clean.tsv ===")
 
 	print("\n=== STATS: 'yes' instances per (pattern, pair) ===")

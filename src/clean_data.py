@@ -126,6 +126,7 @@ def find_adjective(df_dedup):
 			match_text = re.search(pattern, text)
 
 			if match_text:
+				print(row)
 				found_x = match_text.group(1)
 				found_y = match_text.group(3)
 				df_dedup.at[index, "X_found"] = found_x
@@ -137,7 +138,7 @@ def find_adjective(df_dedup):
 				df_dedup.at[index, "costr"] = costr
 				df_dedup.at[index, "context_post"] = text.split(costr)[1]
     
-				print(row)
+
 			else:
 				rows_to_remove.add(index)
 
@@ -158,6 +159,8 @@ def find_adjective(df_dedup):
 			pattern = rf'\b(\w+)\s+({re.escape(middle_word)})\s+({adj_2_regex})\b'
 			match_text = re.search(pattern, text)
 			if match_text:
+       
+				print(row)
 				found_x = match_text.group(1)
 				found_y = match_text.group(3)
 				df_dedup.at[index, "X_found"] = found_x
@@ -239,7 +242,7 @@ def deduplicate_by_most_specific_query(df):
 
 if __name__ == "__main__":
 
-	df = pd.read_csv("data/output.tsv", sep="\t", dtype = str)
+	df = pd.read_csv("data/ita_positive.tsv", sep="\t", dtype = str)
 	n_before = len(df)
 	df = df.dropna(subset=["text"])
 

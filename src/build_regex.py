@@ -45,7 +45,6 @@ if __name__ == "__main__":
 	patterns_filename = "data/patterns.txt"
 	seeds_filename = "data/seeds.txt"
 	seeds = set()
-
 	with open(seeds_filename) as fin:
 		for line in fin:
 			linesplit = line.strip().split()

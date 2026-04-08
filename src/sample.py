@@ -30,8 +30,8 @@ def balanced_sample(group_df, target):
 
 
 if __name__ == "__main__":
-	yes_counts = pd.read_csv("data/yes_instances.tsv", sep="\t")
-	df = pd.read_csv("data/output_clean.tsv", sep="\t", dtype=str)
+	yes_counts = pd.read_csv("data/yes_instances_eng.tsv", sep="\t")
+	df = pd.read_csv("data/output_eng.tsv", sep="\t", dtype=str)
 
 	df_yes = df[df["class"] == "yes"]
 	df_no  = df[df["class"] == "no"]
@@ -65,7 +65,7 @@ if __name__ == "__main__":
 
 	df_out = pd.concat([df_yes, df_sampled_no], ignore_index=True)
 	df_out = df_out.sample(frac=1, random_state=42).reset_index(drop=True)  # shuffle
-	df_out.to_csv("data/sample.tsv", sep="\t", index=False)
+	df_out.to_csv("data/sample_eng.tsv", sep="\t", index=False)
 
 	print(f"\nYes instances  : {len(df_yes)}")
 	print(f"Sampled no     : {len(df_sampled_no)}")

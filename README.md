@@ -94,9 +94,18 @@ Each occurrence is associated with a **unique ID**:
 ### Annotation label
 
 - **antonymous_value**:
-  - `"ANTONYMOUS"`  
-  - `"NOT_ANTONYMOUS"`  
-  - `"ERROR"`  
+  - `"ANTONYMOUS"` : if the 
+
+  - `"NOT_ANTONYMOUS"`  : if the 
+
+  - `"IDYOSINCRATIC"` : if the 
+
+  Perché dopo gli alti e bassi degli anni passati, in questo periodo le quotazioni sono scese.
+  
+  - `"ERROR"`  : if the sentence is corrputed 
+
+  the expression in wich the 
+  Già allora il regista manifestava una predilezione per i caratteri femminili non frequente nel cinema italiano, che trova conferma a distanza di cinquant'anni.
 
 ---
 

@@ -1,0 +1,190 @@
+pattern;pair;population;sample_n
+tra X e Y;grande - piccolo;9;1
+tanto X quanto Y;caldo - freddo;2;1
+X , non Y;ottimista - pessimista;1;1
+X , non Y;maggiore - minore;6;1
+X ma Y;maggiore - minore;11;1
+a X e Y;leggero - pesante;1;1
+X e Y;permanente - temporaneo;150;1
+X o Y;asciutto - bagnato;14;1
+X , non Y;morto - vivo;3;1
+o X o Y;falso - vero;1;1
+X ma Y;felice - triste;55;1
+non X ma Y;giusto - sbagliato;2;1
+X e Y;morto - vivo;150;1
+sia X sia Y;falso - vero;1;1
+X ma Y;caldo - freddo;29;1
+X ma Y;lento - veloce;150;1
+meno X che Y;falso - vero;2;1
+sia X sia Y;morto - vivo;1;1
+X e Y;corto - lungo;150;1
+non X ma Y;caldo - freddo;1;1
+X ma Y;nuovo - vecchio;33;1
+sia X che Y;rurale - urbano;3;1
+o X o Y;nuovo - vecchio;1;1
+X , non Y;permanente - temporaneo;1;1
+X ma Y;alto - basso;27;1
+tra X e Y;privato - pubblico;5;1
+X , non Y;corto - lungo;9;1
+sia X che Y;permanente - temporaneo;2;1
+X al_posto_di Y;falso - vero;1;1
+X o Y;povero - ricco;42;1
+tanto X quanto Y;falso - vero;5;1
+X , non Y;felice - triste;4;1
+sia X sia Y;alto - basso;1;1
+X o Y;buono - cattivo;79;1
+tanto X quanto Y;buono - cattivo;1;1
+a X e Y;nuovo - vecchio;15;1
+X ma Y;leggero - pesante;64;1
+o X o Y;felice - triste;3;1
+X e Y;femminile - maschile;32;1
+X o Y;rurale - urbano;24;1
+a X e Y;falso - vero;1;1
+X o Y;alto - basso;77;1
+X o Y;nuovo - vecchio;150;1
+X ma Y;morto - vivo;19;1
+X e Y;caldo - freddo;150;1
+o X o Y;alto - basso;1;1
+tanto X quanto Y;corto - lungo;1;1
+X ma Y;corto - lungo;37;1
+X e Y;difficile - facile;150;1
+X , non Y;grande - piccolo;8;1
+X e Y;maggiore - minore;150;1
+a X e Y;alto - basso;9;1
+non X ma Y;povero - ricco;3;1
+X o Y;privato - pubblico;150;1
+non X ma Y;lento - veloce;2;1
+X e Y;asciutto - bagnato;150;1
+X e Y;grande - piccolo;150;1
+sia X sia Y;caldo - freddo;1;1
+sia X sia Y;duro - morbido;2;1
+tra X e Y;falso - vero;2;1
+X o Y;femminile - maschile;1;1
+X o Y;lento - veloce;28;1
+X , non Y;attivo - passivo;4;1
+tanto X quanto Y;privato - pubblico;1;1
+X e Y;povero - ricco;150;1
+X o Y;permanente - temporaneo;64;1
+X o Y;duro - morbido;34;1
+tra X e Y;corto - lungo;4;1
+X e Y;femminile - mascolino;150;1
+a X e Y;lento - veloce;3;1
+X , non Y;rurale - urbano;1;1
+da X a Y;rurale - urbano;1;1
+o X o Y;buono - cattivo;2;1
+non X ma Y;difficile - facile;5;1
+X , non Y;giusto - sbagliato;9;1
+a X e Y;povero - ricco;1;1
+tanto X quanto Y;lento - veloce;3;1
+X , non Y;difficile - facile;19;1
+X e Y;attivo - passivo;150;1
+non X ma Y;attivo - passivo;2;1
+X , non Y;caldo - freddo;9;1
+X e Y;duro - morbido;150;1
+o X o Y;povero - ricco;2;1
+o X o Y;grande - piccolo;2;1
+non X ma Y;femminile - mascolino;1;1
+tanto X quanto Y;nuovo - vecchio;4;1
+X , non Y;femminile - mascolino;3;1
+non X ma Y;grande - piccolo;6;1
+o X o Y;permanente - temporaneo;1;1
+o X o Y;lento - veloce;1;1
+X , non Y;alto - basso;14;1
+tanto X quanto Y;femminile - mascolino;1;1
+sia X che Y;duro - morbido;1;1
+X ma Y;ottimista - pessimista;1;1
+a X e Y;caldo - freddo;1;1
+X ma Y;grande - piccolo;150;1
+X e Y;ottimista - pessimista;93;1
+a X e Y;privato - pubblico;1;1
+X e Y;buono - cattivo;150;1
+X e Y;lento - veloce;150;1
+sia X che Y;femminile - maschile;1;0
+sia X che Y;femminile - mascolino;16;0
+X e Y;alto - basso;150;0
+X , non Y;sobrio - ubriaco;1;0
+sia X che Y;buono - cattivo;1;0
+X o Y;difficile - facile;72;0
+X o Y;caldo - freddo;58;0
+X o Y;felice - triste;80;0
+X e Y;leggero - pesante;150;0
+non X ma Y;buono - cattivo;2;0
+X o Y;femminile - mascolino;51;0
+X o Y;attivo - passivo;23;0
+tra X e Y;giusto - sbagliato;2;0
+sia X sia Y;giusto - sbagliato;1;0
+X e Y;privato - pubblico;150;0
+X o Y;ottimista - pessimista;3;0
+sia X che Y;falso - vero;1;0
+tanto X quanto Y;povero - ricco;5;0
+X ma Y;femminile - maschile;2;0
+X ma Y;privato - pubblico;26;0
+X e Y;falso - vero;150;0
+X e Y;nuovo - vecchio;150;0
+sia X che Y;corto - lungo;1;0
+sia X che Y;morto - vivo;1;0
+X ma Y;femminile - mascolino;3;0
+tra X e Y;nuovo - vecchio;5;0
+o X o Y;privato - pubblico;1;0
+X , non Y;buono - cattivo;8;0
+a X e Y;felice - triste;1;0
+X ma Y;attivo - passivo;11;0
+tanto X quanto Y;giusto - sbagliato;3;0
+sia X che Y;grande - piccolo;1;0
+tanto X quanto Y;ottimista - pessimista;1;0
+X e Y;sobrio - ubriaco;150;0
+X o Y;corto - lungo;82;0
+X e Y;felice - triste;150;0
+X , non Y;duro - morbido;4;0
+a X e Y;maggiore - minore;2;0
+X o Y;maggiore - minore;150;0
+X o Y;falso - vero;150;0
+tanto X quanto Y;duro - morbido;1;0
+tanto X quanto Y;grande - piccolo;9;0
+X o Y;leggero - pesante;35;0
+X , non Y;falso - vero;13;0
+X , non Y;leggero - pesante;8;0
+X ma Y;falso - vero;61;0
+tanto X quanto Y;alto - basso;1;0
+o X o Y;difficile - facile;1;0
+X , non Y;nuovo - vecchio;21;0
+X ma Y;povero - ricco;65;0
+tanto X quanto Y;difficile - facile;14;0
+o X o Y;giusto - sbagliato;1;0
+tanto X quanto Y;felice - triste;2;0
+tanto X quanto Y;maggiore - minore;6;0
+X ma Y;giusto - sbagliato;26;0
+X ma Y;buono - cattivo;30;0
+a X e Y;grande - piccolo;32;0
+X invece_che Y;nuovo - vecchio;1;0
+tra X e Y;leggero - pesante;2;0
+X ma Y;duro - morbido;55;0
+X e Y;rurale - urbano;150;0
+X o Y;grande - piccolo;143;0
+X , non Y;privato - pubblico;21;0
+X ma Y;difficile - facile;72;0
+sia X sia Y;privato - pubblico;10;0
+tra X e Y;femminile - mascolino;9;0
+o X o Y;caldo - freddo;1;0
+X e Y;giusto - sbagliato;150;0
+sia X sia Y;femminile - mascolino;15;0
+tra X e Y;attivo - passivo;1;0
+X , non Y;asciutto - bagnato;1;0
+X ma Y;asciutto - bagnato;7;0
+sia X che Y;nuovo - vecchio;3;0
+o X o Y;corto - lungo;2;0
+sia X che Y;privato - pubblico;13;0
+a X e Y;difficile - facile;3;0
+X o Y;sobrio - ubriaco;13;0
+non X ma Y;alto - basso;5;0
+X o Y;giusto - sbagliato;73;0
+X ma Y;sobrio - ubriaco;22;0
+non X ma Y;falso - vero;2;0
+tra X e Y;rurale - urbano;1;0
+X , non Y;povero - ricco;3;0
+X ma Y;permanente - temporaneo;14;0
+a X e Y;giusto - sbagliato;2;0
+X , non Y;lento - veloce;2;0
+X o Y;morto - vivo;45;0
+tra X e Y;buono - cattivo;2;0
+a X e Y;corto - lungo;113;0

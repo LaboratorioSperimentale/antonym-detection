@@ -1,0 +1,296 @@
+pattern;pair;population;sample_n
+not X, but Y;happy - sad;4;1
+both X and Y;right - wrong;28;1
+X rather than Y;optimistic - pessimistic;2;1
+X rather than Y;large - small;2;1
+neither X nor Y;new - old;22;1
+X and Y;female - male;108;1
+X as well as Y;large - small;2;1
+not X, but Y;new - old;1;1
+the very X and the very Y;bad - good;1;1
+X, not Y;cold - hot;20;1
+both X and Y;long - short;8;1
+how X or Y;heavy - light;3;1
+X or Y;happy - sad;150;1
+how X or Y;rural - urban;2;1
+neither X nor Y;optimistic - pessimistic;1;1
+X as well as Y;poor - rich;3;1
+X as well as Y;permanent - temporary;1;1
+more X than Y;major - minor;2;1
+more X than Y;female - male;36;1
+both X and Y;active - passive;10;1
+both X and Y;happy - sad;50;1
+either X or Y;high - low;8;1
+both X and Y;permanent - temporary;9;1
+X, not Y;difficult - easy;7;1
+between X and Y;active - passive;8;1
+X and Y;drunk - sober;150;1
+more X than Y;optimistic - pessimistic;5;1
+neither X nor Y;false - true;4;1
+either X or Y;major - minor;1;1
+from X to Y;alive - dead;2;1
+from X to Y;happy - sad;11;1
+X as well as Y;difficult - easy;4;1
+more X than Y;cold - hot;7;1
+how X or Y;poor - rich;1;1
+from X to Y;large - small;9;1
+X or Y;rural - urban;90;1
+either too X or too Y;long - short;2;1
+between X and Y;fast - slow;1;1
+whether X or Y;alive - dead;4;1
+from X to Y;private - public;2;1
+how X or Y;bad - good;7;1
+either too X or too Y;cold - hot;1;1
+either X or Y;rural - urban;1;1
+X, not Y;right - wrong;4;1
+X or Y;feminine - masculine;26;1
+more X than Y;false - true;6;1
+X and Y alike;active - passive;1;1
+X rather than Y;cold - hot;4;1
+X and Y;dry - wet;150;1
+either X or Y;private - public;7;1
+either X or Y;fast - slow;3;1
+both X and Y;fast - slow;7;1
+X as well as Y;active - passive;1;1
+X and Y;private - public;150;1
+neither X nor Y;alive - dead;4;1
+X and Y;rural - urban;150;1
+X or Y;false - true;150;1
+both X and Y;hard - soft;19;1
+between X and Y;large - small;3;1
+X, not Y;fast - slow;5;1
+X or Y;high - low;150;1
+X and Y;major - minor;136;1
+how X or Y;permanent - temporary;3;1
+more X than Y;active - passive;15;1
+either too X or too Y;new - old;5;1
+between X and Y;alive - dead;3;1
+X rather than Y;bad - good;3;1
+the very X and the very Y;new - old;7;1
+X or Y;major - minor;57;1
+either too X or too Y;active - passive;1;1
+both X and Y;private - public;44;1
+X rather than Y;alive - dead;1;1
+X and Y;optimistic - pessimistic;150;1
+X, not Y;permanent - temporary;3;1
+X rather than Y;female - male;1;1
+between X and Y;false - true;1;1
+X or Y;right - wrong;150;1
+X and Y;large - small;150;1
+X and Y;feminine - masculine;147;1
+X, not Y;hard - soft;13;1
+X or Y;optimistic - pessimistic;17;1
+between X and Y;long - short;1;1
+X as well as Y;fast - slow;1;1
+X and Y;long - short;150;1
+whether X or Y;permanent - temporary;2;1
+both X and Y;false - true;27;1
+neither X nor Y;right - wrong;2;1
+X or Y;new - old;150;1
+X, not Y;alive - dead;11;1
+X or Y;permanent - temporary;94;1
+whether X or Y;happy - sad;1;1
+either X or Y;happy - sad;2;1
+between X and Y;new - old;23;1
+more X than Y;bad - good;25;1
+either X or Y;permanent - temporary;5;1
+X and Y;new - old;150;1
+either X or Y;optimistic - pessimistic;2;1
+X, not Y;false - true;12;1
+both X and Y;high - low;19;1
+X rather than Y;poor - rich;1;1
+more X than Y;new - old;14;0
+both X and Y;drunk - sober;4;0
+either X or Y;right - wrong;7;0
+X, not Y;poor - rich;8;0
+neither X nor Y;bad - good;10;0
+from X to Y;high - low;15;0
+X or Y;dry - wet;150;0
+neither X nor Y;dry - wet;2;0
+either X or Y;alive - dead;19;0
+more X than Y;right - wrong;4;0
+X as well as Y;feminine - masculine;1;0
+from X to Y;active - passive;3;0
+not X, but Y;right - wrong;1;0
+X or Y;fast - slow;78;0
+between X and Y;cold - hot;9;0
+between X and Y;private - public;14;0
+X, not Y;rural - urban;2;0
+not X, but Y;long - short;1;0
+X, not Y;large - small;12;0
+more X than Y;happy - sad;13;0
+either X or Y;bad - good;8;0
+X as well as Y;bad - good;4;0
+between X and Y;difficult - easy;2;0
+not X, but Y;fast - slow;1;0
+X rather than Y;false - true;2;0
+how X or Y;long - short;3;0
+how X or Y;fast - slow;3;0
+more X than Y;permanent - temporary;4;0
+not X, but Y;alive - dead;1;0
+both X and Y;large - small;52;0
+not X, but Y;false - true;1;0
+X and Y;bad - good;150;0
+between X and Y;bad - good;38;0
+from X to Y;heavy - light;3;0
+either X or Y;large - small;4;0
+between X and Y;feminine - masculine;5;0
+from X to Y;optimistic - pessimistic;3;0
+neither X nor Y;heavy - light;1;0
+between X and Y;permanent - temporary;2;0
+X rather than Y;active - passive;4;0
+X and Y alike;poor - rich;5;0
+X rather than Y;long - short;3;0
+more X than Y;heavy - light;12;0
+X, not Y;new - old;10;0
+more X than Y;large - small;14;0
+either X or Y;active - passive;3;0
+neither X nor Y;large - small;3;0
+either too X or too Y;high - low;1;0
+how X or Y;difficult - easy;1;0
+X or Y;long - short;117;0
+whether X or Y;long - short;1;0
+X rather than Y;permanent - temporary;4;0
+from X to Y;rural - urban;8;0
+X and Y;hard - soft;150;0
+X as well as Y;dry - wet;4;0
+X and Y alike;new - old;47;0
+both X and Y;feminine - masculine;4;0
+either too X or too Y;large - small;1;0
+neither X nor Y;private - public;2;0
+either too X or too Y;poor - rich;1;0
+X or Y;bad - good;150;0
+X, not Y;dry - wet;6;0
+neither X nor Y;female - male;1;0
+how X or Y;hard - soft;9;0
+X as well as Y;high - low;2;0
+X, not Y;active - passive;3;0
+more X than Y;high - low;16;0
+both X and Y;difficult - easy;46;0
+X and Y alike;bad - good;2;0
+whether X or Y;hard - soft;1;0
+both X and Y;female - male;2;0
+not X, but Y;hard - soft;1;0
+X and Y;active - passive;150;0
+neither X nor Y;poor - rich;8;0
+X, not Y;happy - sad;14;0
+neither X nor Y;drunk - sober;4;0
+neither X nor Y;active - passive;5;0
+not X, but Y;heavy - light;2;0
+X, not Y;female - male;2;0
+X as well as Y;false - true;1;0
+X or Y;hard - soft;150;0
+both X and Y;new - old;105;0
+more X than Y;dry - wet;2;0
+from X to Y;fast - slow;2;0
+more X than Y;hard - soft;1;0
+X and Y;happy - sad;150;0
+whether X or Y;new - old;4;0
+neither X nor Y;permanent - temporary;5;0
+X and Y alike;large - small;2;0
+how X or Y;happy - sad;2;0
+X and Y;difficult - easy;150;0
+between X and Y;hard - soft;2;0
+X as well as Y;cold - hot;2;0
+from X to Y;hard - soft;4;0
+either X or Y;drunk - sober;6;0
+more X than Y;difficult - easy;23;0
+neither X nor Y;cold - hot;8;0
+both X and Y;dry - wet;5;0
+X or Y;heavy - light;150;0
+both X and Y;cold - hot;11;0
+between X and Y;poor - rich;16;0
+whether X or Y;difficult - easy;1;0
+X and Y;fast - slow;150;0
+X or Y;poor - rich;150;0
+neither X nor Y;major - minor;1;0
+X or Y;large - small;150;0
+X as well as Y;new - old;4;0
+more X than Y;drunk - sober;6;0
+both X and Y;rural - urban;14;0
+X as well as Y;heavy - light;1;0
+between X and Y;high - low;13;0
+neither X nor Y;happy - sad;6;0
+both X and Y;poor - rich;14;0
+X and Y;right - wrong;150;0
+separating X and Y;private - public;1;0
+neither X nor Y;hard - soft;1;0
+X rather than Y;hard - soft;3;0
+how X or Y;false - true;1;0
+how X or Y;large - small;47;0
+X as well as Y;happy - sad;1;0
+more X than Y;feminine - masculine;7;0
+whether X or Y;false - true;2;0
+neither X nor Y;difficult - easy;18;0
+from X to Y;new - old;11;0
+X and Y;high - low;150;0
+X as well as Y;private - public;2;0
+X, not Y;drunk - sober;1;0
+neither X nor Y;long - short;4;0
+more X than Y;fast - slow;2;0
+not X, but Y;difficult - easy;2;0
+from X to Y;poor - rich;4;0
+either X or Y;difficult - easy;4;0
+X as well as Y;long - short;1;0
+how X or Y;right - wrong;3;0
+both X and Y;heavy - light;17;0
+from X to Y;drunk - sober;1;0
+more X than Y;alive - dead;8;0
+more X than Y;poor - rich;9;0
+X and Y;cold - hot;150;0
+X, not Y;long - short;7;0
+X or Y;difficult - easy;150;0
+both X and Y;alive - dead;11;0
+X and Y;alive - dead;150;0
+between X and Y;rural - urban;10;0
+X, not Y;high - low;2;0
+X or Y;active - passive;85;0
+either X or Y;false - true;7;0
+X rather than Y;happy - sad;3;0
+how X or Y;cold - hot;3;0
+X as well as Y;drunk - sober;1;0
+not X, but Y;bad - good;10;0
+X and Y;false - true;150;0
+either X or Y;new - old;7;0
+from X to Y;major - minor;2;0
+whether X or Y;private - public;2;0
+X, not Y;private - public;4;0
+X, not Y;bad - good;70;0
+X or Y;cold - hot;150;0
+more X than Y;private - public;16;0
+X and Y;heavy - light;150;0
+X rather than Y;right - wrong;1;0
+either X or Y;hard - soft;3;0
+whether X or Y;large - small;5;0
+both X and Y;bad - good;23;0
+the very X and the very Y;large - small;1;0
+more X than Y;rural - urban;11;0
+X or Y;drunk - sober;77;0
+X or Y;alive - dead;150;0
+either X or Y;poor - rich;6;0
+from X to Y;difficult - easy;3;0
+from X to Y;bad - good;123;0
+either X or Y;long - short;1;0
+X or Y;female - male;28;0
+X as well as Y;rural - urban;3;0
+more X than Y;long - short;5;0
+neither X nor Y;fast - slow;3;0
+X and Y;poor - rich;150;0
+either X or Y;cold - hot;5;0
+not X, but Y;large - small;1;0
+from X to Y;dry - wet;3;0
+neither X nor Y;high - low;2;0
+both X and Y;major - minor;4;0
+between X and Y;right - wrong;5;0
+both X and Y;optimistic - pessimistic;1;0
+X, not Y;feminine - masculine;4;0
+X rather than Y;private - public;4;0
+how X or Y;new - old;8;0
+between X and Y;happy - sad;3;0
+whether X or Y;rural - urban;2;0
+X and Y;permanent - temporary;150;0
+from X to Y;cold - hot;11;0
+X or Y;private - public;150;0
+X, not Y;major - minor;2;0
+not X, but Y;drunk - sober;1;0
+X, not Y;heavy - light;6;0

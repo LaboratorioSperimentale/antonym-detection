@@ -34,12 +34,10 @@ src/clean_data_eng.py
 
 
 SAMPLING FOR DATA CREATION
-YES PATTERN SEED MAX 100 INSTANCES
-NO PATTERN SEED MAX 150 INSTANCES
 ```
 src/sample.py output in /dataset
 ```
-
+(yes pattern-seed max 100 items / no pattern-seed max 150 items)
 
 SAMPLING 100 INSTANCING FOR INTER-ANNOTATOR AGREEMENT
 ```

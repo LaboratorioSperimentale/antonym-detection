@@ -2,7 +2,7 @@
 
 This repository contains code and data for an ongoing project that investigates antonymy detection through **constructional information encoded in contextual embeddings**.
 
-The core idea is to move beyond purely lexical approaches to antonymy and explore whether **distributional and constructional patterns**, as captured by pretrained language models, can support the identification of antonymic relations.
+The core idea is to move beyond purely lexical approaches to antonymy and explore whether **contextualised distributional and constructional patterns**, as captured by pretrained language models, can support the identification of antonymic relations.
 
 ---
 
@@ -62,7 +62,7 @@ This procedure generates structurally similar contexts that are **not guaranteed
 Manual annotation is a crucial step in the pipeline.
 
 Some automatically extracted *negative candidates* may still express antonymy, for example when:
-- the retrieved adjective is a **synonym or near-antonym** of the seed pair element  
+- the retrieved adjective is a **near-antonym** of the seed pair element  
 - the construction still conveys a contrastive meaning  
 
 Conversely, many extracted pairs do not form valid antonymic relations and represent true negative instances.
@@ -80,25 +80,25 @@ Each occurrence is associated with a **unique ID**:
 ### Fields
 
 - **id**: unique identifier  
-- **class**: `"yes"` / `"no"` (candidate label from extraction)  
+- **class**: `"yes"` / `"no"` (positive or negative quer built)  
 - **pattern**: constructional pattern (e.g. *X and Y*, *from X to Y*)  
 - **X_found**: surface form of the first adjective  
 - **Y_found**: surface form of the second adjective  
 - **pair**: lemmatized original seed pair (e.g. *big–small*)  
 - **context_pre**: left context  
-- **costr**: construction span  
+- **costr**: construction matched
 - **context_post**: right context  
 
 ### Annotation labels
 
 - **ANTONYMOUS**  
-  The instance expresses a genuine antonymic relation.
+  The instance expresses an actual antonymic relation.
 
 - **NOT_ANTONYMOUS**  
   The instance does not express antonymy.
 
 - **IDIOSYNCRATIC**  
-  The construction is formally matched but does not convey a compositional antonymic meaning (e.g. fixed expressions or context-specific uses).  
+  The construction has an idyosincraitc value and (often) the X and Y matched have a nominal function (e.g. fixed expressions or context-specific uses).  
   Example:  
   *"Dopo gli alti e bassi degli anni passati, in questo periodo le quotazioni sono scese."*
 

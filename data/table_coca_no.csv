@@ -1,26 +1,26 @@
-                        	 X and Y	 X or Y	 from X to Y	 both X and Y	 X, not Y	 how X or Y	 X and Y alike	 between X and Y	 more X than Y	 neither X nor Y	 either X or Y	 not X, but Y	 the very X and the very Y	 either too X or too Y	 whether X or Y	 X as well as Y	 X rather than Y	 separating X and Y
-new - old               	    4297	    697	          11	          105	       10	          8	            47	              23	            14	              22	             7	            1	                         7	                     5	              4	              4	                	                   
-difficult - easy        	    3251	    465	           3	           46	        7	          1	              	               2	            23	              18	             4	            2	                          	                      	              1	              4	                	                   
-large - small           	    2930	    380	           9	           52	       12	         47	             2	               3	            14	               3	             4	            1	                         1	                     1	              5	              2	               2	                   
-happy - sad             	    2544	    256	          11	           50	       14	          2	              	               3	            13	               6	             2	            4	                          	                      	              1	              1	               3	                   
-long - short            	    2525	    117	            	            8	        7	          3	              	               1	             5	               4	             1	            1	                          	                     2	              1	              1	               3	                   
-poor - rich             	    2447	    273	           4	           14	        8	          1	             5	              16	             9	               8	             6	             	                          	                     1	               	              3	               1	                   
-bad - good              	    2269	    564	         123	           23	       70	          7	             2	              38	            25	              10	             8	           10	                         1	                      	               	              4	               3	                   
-hard - soft             	    2157	    173	           4	           19	       13	          9	              	               2	             1	               1	             3	            1	                          	                      	              1	               	               3	                   
-cold - hot              	    2147	    209	          11	           11	       20	          3	              	               9	             7	               8	             5	             	                          	                     1	               	              2	               4	                   
-dry - wet               	    1590	    157	           3	            5	        6	           	              	                	             2	               2	              	             	                          	                      	               	              4	                	                   
-fast - slow             	    1547	     78	           2	            7	        5	          3	              	               1	             2	               3	             3	            1	                          	                      	               	              1	                	                   
-heavy - light           	    1514	    152	           3	           17	        6	          3	              	                	            12	               1	              	            2	                          	                      	               	              1	                	                   
-high - low              	    1481	    241	          15	           19	        2	           	              	              13	            16	               2	             8	             	                          	                     1	               	              2	                	                   
-alive - dead            	    1343	    248	           2	           11	       11	           	              	               3	             8	               4	            19	            1	                          	                      	              4	               	               1	                   
-false - true            	    1117	    196	            	           27	       12	          1	              	               1	             6	               4	             7	            1	                          	                      	              2	              1	               2	                   
-private - public        	     987	    178	           2	           44	        4	           	              	              14	            16	               2	             7	             	                          	                      	              2	              2	               4	                  1
-active - passive        	     820	     85	           3	           10	        3	           	             1	               8	            15	               5	             3	             	                          	                     1	               	              1	               4	                   
-right - wrong           	     725	    257	            	           28	        4	          3	              	               5	             4	               2	             7	            1	                          	                      	               	               	               1	                   
-rural - urban           	     502	     90	           8	           14	        2	          2	              	              10	            11	                	             1	             	                          	                      	              2	              3	                	                   
-permanent - temporary   	     374	     94	            	            9	        3	          3	              	               2	             4	               5	             5	             	                          	                      	              2	              1	               4	                   
-drunk - sober           	     321	     77	           1	            4	        1	           	              	                	             6	               4	             6	            1	                          	                      	               	              1	                	                   
-optimistic - pessimistic	     185	     17	           3	            1	         	           	              	                	             5	               1	             2	             	                          	                      	               	               	               2	                   
-feminine - masculine    	     147	     26	            	            4	        4	           	              	               5	             7	                	              	             	                          	                      	               	              1	                	                   
-major - minor           	     136	     57	           2	            4	        2	           	              	                	             2	               1	             1	             	                          	                      	               	               	                	                   
-female - male           	     108	     28	            	            2	        2	           	              	                	            36	               1	              	             	                          	                      	               	               	               1	                   
+	X and Y	X or Y	from X to Y	both X and Y	how X or Y	X and Y alike	X, not Y	more X than Y	between X and Y	neither X nor Y	either X or Y	not X, but Y	the very X and the very Y	whether X or Y	either too X or too Y	X as well as Y	X rather than Y	separating X and Y
+new - old	4000	645	9	103	8	45	8	12	22	19	7	1	7	4	5	4		
+difficult - easy	2895	436	3	43	1		7	21	2	15	4	1		1		4		
+large - small	2672	355	8	51	46	2	11	13	3	2	4	1	1	5	1	2	2	
+long - short	2287	108		8	3		6	4	1	4	1	1		1	2	1	2	
+poor - rich	2287	261	4	14	1	4	6	9	15	5	6				1	3	1	
+happy - sad	2118	232	11	39	2		14	11	2	3	2	2		1		1	3	
+bad - good	2005	518	105	21	7	1	39	22	36	7	8	9	1			4	3	
+hard - soft	1914	159	4	17	9		12	1	2	1	3	1		1			3	
+cold - hot	1801	172	11	10	3		15	6	9	6	5				1	2	4	
+dry - wet	1373	145	2	5			5	2		2						3		
+fast - slow	1368	73	2	7	3		4	2	1	3	3	1				1		
+high - low	1334	226	14	18			2	15	12	2	7				1	2		
+heavy - light	1331	142	3	16	2		5	12		1		2				1		
+alive - dead	1168	215	2	11			9	5	3	3	15	1		4			1	
+false - true	997	187		24	1		9	6	1	4	7	1		2		1	2	
+private - public	937	174	2	40			4	16	14	2	7			2		2	4	1
+active - passive	769	83	3	10		1	1	15	7	5	3				1		4	
+right - wrong	655	239		25	3		3	4	5	2	5	1					1	
+rural - urban	483	85	8	14	2		1	11	10		1			2		3		
+permanent - temporary	354	88		8	3		2	4	2	5	5			2		1	4	
+drunk - sober	279	64	1	2			1	4		2	5	1						
+optimistic - pessimistic	160	15	3	1				5		1	2						2	
+feminine - masculine	132	24		4			4	7	5							1		
+major - minor	131	55	2	4				2			1							
+female - male	103	26		1			1	36		1							1	

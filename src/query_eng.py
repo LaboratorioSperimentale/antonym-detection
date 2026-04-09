@@ -47,7 +47,9 @@ def process_paragraph(current_paragraph,
 			if match:
 				extraction = f"yes\t{pattern}\t{X_found}\t{Y_found}\t{x} - {y}\t{query.pattern}\t{match.group(1)}\t{match.group(2)}\t{match.group(5)}"
 				extraction = clean_token(extraction)
-				if valid_sentence_length(extraction):
+				sentence = f"{match.group(1)} {match.group(2)} {match.group(5)}"
+				sentence = clean_token(sentence)
+				if valid_sentence_length(sentence):
 					print(extraction, file=output_file)
 
 	matched_neg = set()  # (X_found, Y_found, pattern_template) already matched
@@ -66,7 +68,9 @@ def process_paragraph(current_paragraph,
 			if match:
 				extraction = f"no\t{pattern}\t{X_found}\t{Y_found}\t{x} - {y}\t{query.pattern}\t{match.group(1)}\t{match.group(2)}\t{match.group(5)}"
 				extraction = clean_token(extraction)
-				if valid_sentence_length(extraction):
+				sentence = f"{match.group(1)} {match.group(2)} {match.group(5)}"
+				sentence = clean_token(sentence)
+				if valid_sentence_length(sentence):
 					print(extraction, file=output_file)
 
 

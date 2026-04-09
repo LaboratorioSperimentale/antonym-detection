@@ -1,0 +1,242 @@
+pattern	pair	population	sample_n
+X and Y alike	bad - good	3	1
+X and Y	false - true	28	1
+separating X and Y	female - male	1	1
+neither X nor Y	false - true	4	1
+whether X or Y	permanent - temporary	1	1
+from X to Y	long - short	4	1
+more X than Y	high - low	1	1
+neither X nor Y	right - wrong	5	1
+X and Y	feminine - masculine	79	1
+both X and Y	cold - hot	18	1
+X or Y	drunk - sober	16	1
+neither X nor Y	cold - hot	17	1
+whether X or Y	active - passive	2	1
+neither X nor Y	female - male	4	1
+X, not Y	happy - sad	1	1
+either X or Y	high - low	15	1
+how X or Y	new - old	2	1
+X and Y	long - short	100	1
+X rather than Y	alive - dead	1	1
+both X and Y	optimistic - pessimistic	1	1
+X as well as Y	dry - wet	1	1
+X and Y	permanent - temporary	14	1
+between X and Y	private - public	26	1
+X and Y alike	rural - urban	1	1
+how X or Y	large - small	18	1
+from X to Y	hard - soft	6	1
+X and Y	happy - sad	23	1
+X rather than Y	new - old	2	1
+between X and Y	dry - wet	10	1
+either X or Y	rural - urban	3	1
+both X and Y	alive - dead	12	1
+neither X nor Y	long - short	1	1
+X and Y alike	female - male	6	1
+X or Y	permanent - temporary	41	1
+X and Y	optimistic - pessimistic	9	1
+both X and Y	new - old	74	1
+between X and Y	feminine - masculine	4	1
+more X than Y	false - true	1	1
+either X or Y	dry - wet	2	1
+whether X or Y	private - public	11	1
+X rather than Y	rural - urban	1	1
+both X and Y	female - male	100	1
+both X and Y	bad - good	100	1
+X and Y	major - minor	81	1
+more X than Y	cold - hot	4	1
+X rather than Y	bad - good	1	1
+whether X or Y	bad - good	22	1
+X as well as Y	private - public	8	1
+how X or Y	bad - good	30	1
+both X and Y	false - true	4	1
+neither X nor Y	alive - dead	8	1
+neither X nor Y	new - old	1	1
+both X and Y	rural - urban	73	1
+X, not Y	new - old	1	1
+X or Y	large - small	100	1
+X, not Y	private - public	2	1
+either too X or too Y	large - small	2	1
+from X to Y	poor - rich	10	1
+either X or Y	permanent - temporary	7	1
+whether X or Y	cold - hot	1	1
+either X or Y	right - wrong	13	1
+between X and Y	happy - sad	1	1
+either X or Y	female - male	11	1
+more X than Y	active - passive	1	1
+X rather than Y	cold - hot	1	1
+both X and Y	happy - sad	9	1
+X rather than Y	false - true	1	1
+either X or Y	private - public	6	1
+more X than Y	bad - good	28	1
+between X and Y	new - old	51	1
+between X and Y	rural - urban	73	1
+whether X or Y	long - short	1	1
+X, not Y	cold - hot	3	1
+X and Y alike	poor - rich	40	1
+both X and Y	hard - soft	8	1
+both X and Y	dry - wet	18	1
+from X to Y	rural - urban	27	1
+X and Y	dry - wet	77	1
+X or Y	long - short	61	1
+both X and Y	long - short	23	1
+either X or Y	long - short	7	1
+the very X and the very Y	poor - rich	5	1
+X rather than Y	active - passive	13	1
+from X to Y	difficult - easy	1	1
+neither X nor Y	active - passive	2	1
+either X or Y	hard - soft	3	1
+X as opposed to Y	bad - good	1	1
+X and Y	heavy - light	17	1
+X as well as Y	large - small	6	1
+X and Y alike	new - old	1	1
+X or Y	bad - good	100	1
+between X and Y	large - small	7	1
+both X and Y	major - minor	8	1
+either too X or too Y	long - short	2	1
+X or Y	happy - sad	44	1
+between X and Y	fast - slow	1	1
+either X or Y	false - true	17	1
+neither X nor Y	high - low	1	1
+X, not Y	active - passive	2	1
+X or Y	alive - dead	100	1
+more X than Y	female - male	16	0
+either X or Y	major - minor	2	0
+X, not Y	bad - good	8	0
+either X or Y	happy - sad	2	0
+X and Y alike	high - low	1	0
+whether X or Y	high - low	1	0
+either too X or too Y	dry - wet	1	0
+how X or Y	difficult - easy	6	0
+from X to Y	bad - good	9	0
+X and Y	active - passive	45	0
+X and Y	bad - good	100	0
+X, not Y	alive - dead	4	0
+X or Y	dry - wet	48	0
+between X and Y	high - low	58	0
+whether X or Y	false - true	2	0
+whether X or Y	dry - wet	3	0
+from X to Y	large - small	22	0
+between X and Y	cold - hot	5	0
+X, not Y	permanent - temporary	2	0
+from X to Y	false - true	1	0
+either too X or too Y	fast - slow	2	0
+between X and Y	hard - soft	8	0
+X as well as Y	major - minor	1	0
+either X or Y	feminine - masculine	4	0
+X or Y	poor - rich	97	0
+X and Y	right - wrong	100	0
+both X and Y	feminine - masculine	16	0
+either too X or too Y	cold - hot	3	0
+either X or Y	cold - hot	3	0
+X and Y	hard - soft	63	0
+whether X or Y	new - old	1	0
+X and Y alike	large - small	2	0
+either X or Y	new - old	1	0
+X and Y	difficult - easy	8	0
+both X and Y	high - low	34	0
+X as well as Y	bad - good	5	0
+either X or Y	fast - slow	3	0
+more X than Y	new - old	1	0
+X or Y	private - public	100	0
+either X or Y	bad - good	37	0
+both X and Y	permanent - temporary	3	0
+neither X nor Y	optimistic - pessimistic	1	0
+how X or Y	fast - slow	2	0
+X rather than Y	happy - sad	2	0
+how X or Y	long - short	3	0
+X or Y	rural - urban	58	0
+X or Y	difficult - easy	13	0
+either too X or too Y	bad - good	1	0
+X or Y	active - passive	16	0
+both X and Y	large - small	98	0
+X and Y	rural - urban	100	0
+whether X or Y	right - wrong	5	0
+from X to Y	permanent - temporary	1	0
+X, not Y	feminine - masculine	1	0
+X as well as Y	rural - urban	4	0
+more X than Y	private - public	1	0
+X or Y	false - true	100	0
+between X and Y	false - true	6	0
+how X or Y	high - low	5	0
+X or Y	cold - hot	100	0
+either X or Y	large - small	4	0
+from X to Y	active - passive	4	0
+X and Y	cold - hot	100	0
+between X and Y	optimistic - pessimistic	1	0
+X or Y	heavy - light	9	0
+either X or Y	active - passive	2	0
+neither X nor Y	poor - rich	4	0
+how X or Y	major - minor	1	0
+the very X and the very Y	new - old	1	0
+X or Y	female - male	31	0
+either too X or too Y	private - public	1	0
+X, not Y	dry - wet	1	0
+X as well as Y	female - male	1	0
+X and Y	fast - slow	25	0
+from X to Y	high - low	43	0
+both X and Y	active - passive	9	0
+between X and Y	difficult - easy	2	0
+X, not Y	high - low	1	0
+whether X or Y	difficult - easy	1	0
+neither X nor Y	private - public	1	0
+between X and Y	bad - good	41	0
+X and Y	female - male	100	0
+X and Y	high - low	100	0
+X or Y	optimistic - pessimistic	11	0
+neither X nor Y	bad - good	30	0
+both X and Y	right - wrong	10	0
+X and Y	new - old	100	0
+from X to Y	cold - hot	2	0
+X rather than Y	large - small	1	0
+neither X nor Y	happy - sad	3	0
+either X or Y	alive - dead	8	0
+more X than Y	feminine - masculine	1	0
+not X, but Y	alive - dead	1	0
+X or Y	right - wrong	100	0
+X or Y	high - low	100	0
+between X and Y	poor - rich	100	0
+X or Y	feminine - masculine	28	0
+more X than Y	permanent - temporary	1	0
+from X to Y	new - old	5	0
+more X than Y	poor - rich	1	0
+how X or Y	right - wrong	2	0
+whether X or Y	poor - rich	9	0
+neither X nor Y	heavy - light	2	0
+from X to Y	happy - sad	3	0
+X or Y	new - old	51	0
+X or Y	fast - slow	25	0
+between X and Y	alive - dead	3	0
+X and Y	private - public	100	0
+X or Y	major - minor	44	0
+more X than Y	rural - urban	1	0
+either too X or too Y	high - low	3	0
+whether X or Y	large - small	8	0
+how X or Y	optimistic - pessimistic	1	0
+more X than Y	alive - dead	27	0
+both X and Y	poor - rich	17	0
+X as well as Y	poor - rich	3	0
+either too X or too Y	difficult - easy	4	0
+whether X or Y	alive - dead	4	0
+X and Y	alive - dead	24	0
+X or Y	hard - soft	25	0
+either X or Y	optimistic - pessimistic	2	0
+both X and Y	private - public	100	0
+either X or Y	poor - rich	1	0
+between X and Y	major - minor	6	0
+between X and Y	heavy - light	1	0
+both X and Y	fast - slow	2	0
+between X and Y	active - passive	8	0
+more X than Y	right - wrong	7	0
+X rather than Y	private - public	2	0
+neither X nor Y	large - small	1	0
+neither X nor Y	feminine - masculine	3	0
+both X and Y	heavy - light	2	0
+whether X or Y	rural - urban	3	0
+X and Y	poor - rich	100	0
+how X or Y	poor - rich	4	0
+X rather than Y	high - low	4	0
+between X and Y	permanent - temporary	1	0
+X and Y	large - small	100	0
+between X and Y	drunk - sober	1	0
+how X or Y	cold - hot	7	0
+between X and Y	long - short	3	0

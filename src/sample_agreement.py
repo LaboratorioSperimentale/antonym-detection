@@ -86,7 +86,7 @@ def main():
 
     # load data
 
-    df = pd.read_csv(args.input_file, sep=";")
+    df = pd.read_csv(args.input_file, sep="\t")
 
     # sampling
     sampled_df, allocation_df = stratified_sample_2d(
@@ -98,8 +98,8 @@ def main():
     )
 
     # save outputs
-    sampled_df.to_csv(args.output_file, sep=";", index=False)
-    allocation_df.to_csv(args.output_file + ".allocation.csv", sep=";", index=False)
+    sampled_df.to_csv(args.output_file, sep="\t", index=False)
+    allocation_df.to_csv(args.output_file + ".allocation.tsv", sep="\t", index=False)
 
     print("\nTop strata by sample size:")
     print(allocation_df.sort_values("sample_n", ascending=False).head(20))

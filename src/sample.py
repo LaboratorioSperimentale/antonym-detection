@@ -1,5 +1,6 @@
 # import math
 import pandas as pd
+import argparse
 
 
 # def balanced_sample(group_df, target):
@@ -75,32 +76,49 @@ import pandas as pd
 
 
 
-df = pd.read_csv("data/output_clean_en_id.tsv", sep="\t", dtype=str)
-
-df_yes = df[df["class"] == "yes"].copy()
-
-sampled_yes = (
-    df_yes.groupby(["pair", "pattern"], group_keys=False)
-          .apply(lambda g: g.sample(n=min(len(g), 100), random_state=42))
-          .reset_index(drop=True)
-)
-
-sampled_yes.to_csv("data/eng_positive.tsv", sep="\t", index=False)
 
 
-print(f"Yes originali: {len(df_yes)}")
-print(f"Yes campionate: {len(sampled_yes)}")
 
 
-df_no = df[df["class"] == "no"].copy()
+def main():
+	parser = argparse.ArgumentParser()
+	parser.add_argument("--input", default="data/output_clean_eng.tsv")
+	parser.add_argument("--sep", default="\t")
+	parser.add_argument("--output_yes", default="data/dataset/eng_positive.tsv")
+	parser.add_argument("--output_no", default="data/dataset/eng_negatives.tsv")
+	args = parser.parse_args()
+ 
+	
+	df = pd.read_csv(args.input, sep=args.sep, dtype=str)
 
-sampled_no = (
-    df_no.groupby(["pair", "pattern"], group_keys=False)
-          .apply(lambda g: g.sample(n=min(len(g), 150), random_state=42))
-          .reset_index(drop=True)
-)
+	df_yes = df[df["class"] == "yes"].copy()
 
-sampled_no.to_csv("data/eng_negatives.tsv", sep="\t", index=False)
+	sampled_yes = (
+		df_yes.groupby(["pair", "pattern"], group_keys=False)
+			.apply(lambda g: g.sample(n=min(len(g), 100), random_state=42))
+			.reset_index(drop=True)
+	)
 
-print(f"NO originali: {len(df_no)}")
-print(f"NO campionate: {len(sampled_no)}")
+	sampled_yes.to_csv(args.output_yes, args.sep, index=False)
+
+
+	print(f"Yes originali: {len(df_yes)}")
+	print(f"Yes campionate: {len(sampled_yes)}")
+
+
+	df_no = df[df["class"] == "no"].copy()
+
+	sampled_no = (
+		df_no.groupby(["pair", "pattern"], group_keys=False)
+			.apply(lambda g: g.sample(n=min(len(g), 150), random_state=42))
+			.reset_index(drop=True)
+	)
+
+	sampled_no.to_csv(args.output_no, args.sep, index=False)
+
+	print(f"NO originali: {len(df_no)}")
+	print(f"NO campionate: {len(sampled_no)}")
+
+
+if __name__ == "__main__":
+	main()

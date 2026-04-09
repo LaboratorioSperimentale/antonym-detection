@@ -1,0 +1,103 @@
+pattern	pair	population	sample_n
+X ma Y	grande - piccolo	3	1
+o X o Y	alto - basso	1	1
+a X e Y	nuovo - vecchio	2	1
+X o Y	giusto - sbagliato	92	1
+X o Y	difficile - facile	10	1
+X o Y	caldo - freddo	48	1
+tra X e Y	buono - cattivo	27	1
+X o Y	felice - triste	14	1
+X e Y	attivo - passivo	100	1
+X , non Y	falso - vero	1	1
+X e Y	giusto - sbagliato	20	1
+X ma Y	morto - vivo	1	1
+tra X e Y	maggiore - minore	1	1
+sia X sia Y	nuovo - vecchio	1	1
+sia X che Y	nuovo - vecchio	1	1
+X , non Y	morto - vivo	1	1
+sia X che Y	privato - pubblico	52	1
+X ma Y	povero - ricco	3	1
+X e Y	caldo - freddo	77	1
+X e Y	permanente - temporaneo	15	1
+tra X e Y	privato - pubblico	100	1
+X o Y	nuovo - vecchio	25	1
+X e Y	maggiore - minore	41	1
+o X o Y	buono - cattivo	1	1
+X o Y	falso - vero	100	1
+tra X e Y	nuovo - vecchio	66	1
+X e Y	duro - morbido	4	1
+sia X che Y	caldo - freddo	5	1
+X o Y	buono - cattivo	100	1
+X e Y	asciutto - bagnato	3	1
+sia X sia Y	grande - piccolo	1	1
+X e Y	buono - cattivo	100	1
+tra X e Y	rurale - urbano	1	1
+X o Y	permanente - temporaneo	24	1
+X e Y	privato - pubblico	100	1
+da X a Y	alto - basso	2	1
+X , non Y	ottimista - pessimista	1	1
+sia X che Y	povero - ricco	1	1
+da X a Y	grande - piccolo	1	1
+X ma Y	rurale - urbano	1	1
+X e Y	falso - vero	31	1
+tra X e Y	caldo - freddo	1	1
+X ma Y	privato - pubblico	1	1
+X , non Y	sobrio - ubriaco	1	1
+X o Y	duro - morbido	4	1
+sia X che Y	buono - cattivo	2	1
+X e Y	povero - ricco	58	1
+X e Y	grande - piccolo	100	1
+sia X sia Y	falso - vero	1	1
+X e Y	ottimista - pessimista	5	1
+sia X che Y	permanente - temporaneo	2	1
+X o Y	leggero - pesante	7	1
+X e Y	corto - lungo	11	1
+X e Y	nuovo - vecchio	100	1
+X , non Y	maggiore - minore	2	1
+X e Y	felice - triste	7	1
+X o Y	attivo - passivo	30	1
+X e Y	alto - basso	100	1
+sia X che Y	rurale - urbano	2	1
+X , non Y	privato - pubblico	4	1
+da X a Y	privato - pubblico	1	1
+X o Y	alto - basso	38	1
+tra X e Y	alto - basso	36	1
+X o Y	povero - ricco	29	1
+tra X e Y	leggero - pesante	1	1
+X o Y	ottimista - pessimista	8	1
+X o Y	lento - veloce	5	1
+o X o Y	corto - lungo	1	1
+X o Y	femminile - mascolino	1	1
+o X o Y	falso - vero	2	1
+a X e Y	grande - piccolo	11	1
+tra X e Y	ottimista - pessimista	2	1
+sia X sia Y	attivo - passivo	3	1
+X o Y	corto - lungo	22	1
+X o Y	rurale - urbano	2	1
+X o Y	grande - piccolo	100	1
+tanto X quanto Y	privato - pubblico	3	1
+X o Y	privato - pubblico	100	1
+sia X che Y	morto - vivo	1	1
+X ma Y	nuovo - vecchio	1	1
+tra X e Y	lento - veloce	1	1
+X o Y	sobrio - ubriaco	2	1
+a X e Y	privato - pubblico	1	1
+tra X e Y	grande - piccolo	30	1
+X o Y	asciutto - bagnato	3	1
+X e Y	rurale - urbano	21	1
+X , non Y	giusto - sbagliato	1	1
+X o Y	morto - vivo	56	1
+X e Y	lento - veloce	8	1
+X , non Y	grande - piccolo	1	1
+X e Y	morto - vivo	12	1
+tanto X quanto Y	maggiore - minore	7	1
+tra X e Y	giusto - sbagliato	2	1
+sia X che Y	falso - vero	1	1
+sia X sia Y	privato - pubblico	31	1
+sia X sia Y	caldo - freddo	3	1
+X e Y	leggero - pesante	21	1
+a X e Y	alto - basso	1	1
+sia X che Y	attivo - passivo	4	1
+X e Y	difficile - facile	4	1
+tra X e Y	falso - vero	17	0
+X o Y	maggiore - minore	100	0

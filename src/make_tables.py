@@ -1,7 +1,7 @@
 import pandas as pd 
 
-df = pd.read_csv("data/cancella1.tsv", sep="\t", dtype = str)
-new_file = "data/cancella3.csv"
+df = pd.read_csv("data/yes_instances_eng.tsv", sep="\t", dtype = str)
+new_file = "data/table_coca_yes.csv"
 
 
 df_table = pd.DataFrame(columns = df["pattern"].unique())

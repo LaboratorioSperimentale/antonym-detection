@@ -2,6 +2,7 @@ import html
 import re
 import tqdm
 import pandas as pd
+import argparse
 
 
 def detokenize(text):
@@ -186,29 +187,29 @@ def is_contained(short_q, long_q):
 
 def deduplicate_by_most_specific_query(df):
 
-    # lunghezza della query
-    df["query_len"] = df["query"].astype(str).str.len()
+	# lunghezza della query
+	df["query_len"] = df["query"].astype(str).str.len()
 
-    # per ogni text, trova l'indice della query più lunga
-    
-    
-    df["text"] = df["context_pre"] + " " + df["costr"] + " " + df["context_post"]
-    
-    idx_to_keep = df.groupby("text")["query_len"].idxmax()
+	# per ogni text, trova l'indice della query più lunga
+	
+	
+	df["text"] = df["context_pre"] + " " + df["costr"] + " " + df["context_post"]
+	
+	idx_to_keep = df.groupby("text")["query_len"].idxmax()
 
-    # dataframe finale
-    df_dedup = df.loc[idx_to_keep].copy()
+	# dataframe finale
+	df_dedup = df.loc[idx_to_keep].copy()
 
-    # righe rimosse
-    df_removed = df.drop(index=idx_to_keep).copy()
+	# righe rimosse
+	df_removed = df.drop(index=idx_to_keep).copy()
 
-    # pulizia colonna temporanea
-    df_dedup = df_dedup.drop(columns=["query_len"])
-    df_removed = df_removed.drop(columns=["query_len"])
-    
-    # togliere text da df dedup
+	# pulizia colonna temporanea
+	df_dedup = df_dedup.drop(columns=["query_len"])
+	df_removed = df_removed.drop(columns=["query_len"])
+	
+	# togliere text da df dedup
 
-    return df_dedup, df_removed
+	return df_dedup, df_removed
 
 	# Drop any remaining duplicates by sent_id (different patterns, neither a substring of the other)
 	# keeping the row with the longest (most specific) query
@@ -220,14 +221,37 @@ def deduplicate_by_most_specific_query(df):
 
 
 
-if __name__ == "__main__":
+# if __name__ == "__main__":
 
-	df = pd.read_csv("data/output_eng.tsv", sep="\t", dtype = str)
+# 	df = pd.read_csv("data/output_eng.tsv", sep="\t", dtype = str)
  
+# 	df_dedup, df_removed = deduplicate_by_most_specific_query(df)
+
+
+def main():
+	parser = argparse.ArgumentParser()
+	parser.add_argument("--input", default="data/output_eng.tsv")
+	parser.add_argument("--output", default="data/output_clean_eng.tsv")
+	parser.add_argument("--yes", default="data/yes_instances_eng.tsv")
+	parser.add_argument("--no", default="data/no_instances_eng.tsv")
+	parser.add_argument("--sep", default="\t")
+	args = parser.parse_args()
+
+	df = pd.read_csv(args.input, sep=args.sep)
+	
 	df_dedup, df_removed = deduplicate_by_most_specific_query(df)
+ 
+	
+	n_before = len(df_dedup)
+	df_dedup = df_dedup[df_dedup["text"].str.split().str.len().between(10, 100)]
+	print("=== STEP 0b: sentence length filter (10–100 tokens) ===")
+	print(f"Removed: {n_before - len(df_dedup)} rows ({n_before} → {len(df_dedup)})")
+ 
+	df_dedup = df_dedup.reset_index(drop=True)
+	df_dedup.insert(6, "sent_id", df_dedup.index + 1)
 
 
-	df_dedup.to_csv("data/output_clean_eng.tsv", sep="\t", index=False)
+	df_dedup.to_csv(args.output, sep=args.sep, index=False)
 	print(f"=== DONE: {len(df_dedup)} rows written to data/output_clean.tsv ===")
 
 	print("\n=== STATS: 'yes' instances per (pattern, pair) ===")
@@ -238,7 +262,7 @@ if __name__ == "__main__":
 		.reset_index(name="count")
 		.sort_values("count", ascending=False)
 	)
-	yes_counts.to_csv("data/yes_instances_eng.tsv", sep="\t", index=False)
+	yes_counts.to_csv(args.yes, sep=args.sep, index=False)
 
 	print("\n=== STATS: 'no' instances per (X_found, Y_found) ===")
 	no_counts = (
@@ -248,4 +272,9 @@ if __name__ == "__main__":
 		.reset_index(name="count")
 		.sort_values("count", ascending=False)
 	)
-	no_counts.to_csv("data/no_instances_eng.tsv", sep="\t", index=False)
+	no_counts.to_csv(args.no, sep=args.sep, index=False)
+ 
+
+
+if __name__ == "__main__":
+	main()

@@ -31,8 +31,6 @@ The English dataset is extracted from the *Corpus of Contemporary American Engli
 - newspapers  
 - academic texts  
 
-
-
 ---
 
 ## Data extraction
@@ -64,12 +62,12 @@ This procedure generates structurally similar contexts that are **not guaranteed
 Manual annotation is a crucial step in the pipeline.
 
 Some automatically extracted *negative candidates* may still express antonymy, for example when:
-- a retrieved adjective is a **synonym or near-antonym** of the seed pair element  
-- the construction still conveys an antonymic contrast  
+- the retrieved adjective is a **synonym or near-antonym** of the seed pair element  
+- the construction still conveys a contrastive meaning  
 
-Conversely, many extracted pairs do not form valid antonymic relations and express actual negative instances.
+Conversely, many extracted pairs do not form valid antonymic relations and represent true negative instances.
 
-Each instance is therefore manually annotated to determine its actual semantic status.
+Each occurrence is manually annotated to determine its actual semantic status.
 
 ---
 
@@ -88,24 +86,30 @@ Each occurrence is associated with a **unique ID**:
 - **Y_found**: surface form of the second adjective  
 - **pair**: lemmatized original seed pair (e.g. *big–small*)  
 - **context_pre**: left context  
-- **costr**: construction   
+- **costr**: construction span  
 - **context_post**: right context  
 
-### Annotation label
+### Annotation labels
 
-- **antonymous_value**:
-  - `"ANTONYMOUS"` : if the 
+- **ANTONYMOUS**  
+  The instance expresses a genuine antonymic relation.
 
-  - `"NOT_ANTONYMOUS"`  : if the 
+- **NOT_ANTONYMOUS**  
+  The instance does not express antonymy.
 
-  - `"IDYOSINCRATIC"` : if the 
+- **IDIOSYNCRATIC**  
+  The construction is formally matched but does not convey a compositional antonymic meaning (e.g. fixed expressions or context-specific uses).  
+  Example:  
+  *"Dopo gli alti e bassi degli anni passati, in questo periodo le quotazioni sono scese."*
 
-  Perché dopo gli alti e bassi degli anni passati, in questo periodo le quotazioni sono scese.
-  
-  - `"ERROR"`  : if the sentence is corrputed 
-
-  the expression in wich the 
-  Già allora il regista manifestava una predilezione per i caratteri femminili non frequente nel cinema italiano, che trova conferma a distanza di cinquant'anni.
+- **ERROR**  
+  The instance is invalid due to noise or extraction errors. This includes:
+  - corrupted or noisy sentences  
+    Example:  
+    *"At @ @ @ @ @ @ @ @ @ @ alive or dead."*  
+  - cases where the matched sequence does not correspond to an actual construction  
+    Example:  
+    *"Già allora il regista manifestava una predilezione per i caratteri femminili..."*
 
 ---
 
